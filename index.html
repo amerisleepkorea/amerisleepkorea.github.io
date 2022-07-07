@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/slideshow.css" rel="stylesheet" />
     <style>
 
         .box {
@@ -152,10 +153,10 @@
                 display: none;
             }
             .mobileprint{
-                visibility: visible;
+                display: block;
             }
             .pcprint{
-                visibility: hidden;
+                display: none;
             }
         }
 
@@ -164,10 +165,10 @@
             width: 100%;
         }
         .mobileprint{
-            visibility: hidden;
+            display: none;
         }
         .pcprint{
-            visibility: visible;
+            display: block;
         }
     </style>
 </head>
@@ -251,17 +252,31 @@
       </nav>
 
     <!-- Masthead-->
-    <header class="masthead position-relative" style="height: 400px;">
+    <header class="masthead position-relative">
+        <!-- <div style="position: absolute;left: 0;top: 0;right: 0;bottom: 0;">
+            <video width="100%" autoplay><source src="https://amerisleep-bucket.s3.ap-northeast-2.amazonaws.com/video/main.mp4" type="video/mp4"></video>
+        </div> -->
+
+        <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <img src="assets/img/header-bg.png" style="width:100%">
+            </div>
+          
+            <div class="mySlides fade">
+                <div style="position: absolute;left: 0;top: 0;right: 0;bottom: 0;">
+                    <video width="100%" autoplay><source src="https://amerisleep-bucket.s3.ap-northeast-2.amazonaws.com/video/main.mp4" type="video/mp4"></video>
+                </div>
+            </div>
+        </div>
+
         <div class="container">
-            <!-- <div class="masthead-subheading">Welcome To Our Studio!</div>
-                <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a> -->
             <img src="assets/img/bestsleep.svg" style="width: 30%;">
         </div>
         <div class="position-absolute row col-md-7 box">
             <div class="col-md-4 d-flex position-relative justify-content-center"
                 style="padding: 10px 0 10px 0;border-right: 1px solid gray;">
-                <div class="align-self-center">
+                <div class="align-self-center" onclick="location.href='https://www.amerisleep.kr/purchase/mattresses/index?type=memoryfoam'">
                     <img src="assets/img/icon01.png" style="width: 70px" /><img src="assets/img/matress.svg"
                         style="height: 12px;margin-left: 10px;" />
                 </div>
@@ -269,7 +284,7 @@
             </div>
             <div class="col-md-4 d-flex position-relative justify-content-center"
                 style="padding: 10px 0 10px 0;border-right: 1px solid gray;">
-                <div class="align-self-center">
+                <div class="align-self-center" onclick="location.href='https://www.amerisleep.kr/purchase/mattresses/index?type=frame'">
                     <img src="assets/img/icon02.png" style="width: 70px" /><img src="assets/img/frame.svg"
                         style="height: 12px;margin-left: 10px;" />
                 </div>
@@ -278,7 +293,7 @@
                 </div>
             </div>
             <div class="col-md-4 d-flex position-relative justify-content-center" style="padding: 10px 0 10px 0;">
-                <div class="align-self-center">
+                <div class="align-self-center" onclick="location.href='https://www.amerisleep.kr/purchase/mattresses/index?type=pillow'">
                     <img src="assets/img/icon03.png" style="width: 70px" /><img src="assets/img/pillow.svg"
                         style="height: 12px;margin-left: 10px;" />
                 </div>
@@ -362,340 +377,327 @@
         <img class="bg-img" src="assets/img/middlebackground.png" />
         <div class="position-absolute align-self-center d-flex flex-column align-items-center">
             <img class="img-fluid" src="assets/img/middletitle.svg" style="width: 40%;" />
-            <img class="img-fluid" src="assets/img/findstorenearhere.svg" style="width: 20%;" />
+            <img class="img-fluid" src="assets/img/findstorenearhere.svg" style="width: 20%;" onclick="location.href='https://www.amerisleep.kr/shop'"/>
         </div>
     </div>
 
-    <section class="col-md-12" style="background-color: #F7F8FC;">
-        <div class="mb-5" style="padding-left: 10px;padding-right: 10px;">
-            <img class="img-fluid" src="assets/img/review.svg"  style="height: 50px;"/>
-            <img class="img-fluid pcprint" src="assets/img/review_subtitle.svg" style="width: 40%;float: right;" />
-            <img class="img-fluid mobileprint" src="assets/img/goseeallreview2.svg">
+    <div class="row col-md-12" style="position: relative">
+        <div class="col-md-6">
+            <img class="img-fluid" src="assets/img/review.svg"/>
         </div>
-        <div class="container-fluid">
-            <div class="row flex-row flex-nowrap overflow-scroll">
-                <!--  -->
-                <div class="fixed" style="border: 1px solid gray;">
-                    <div style="display: flex;flex-direction: row;">
-                        <div style="flex-grow: 1;">
-                            AS3
-                        </div>
-                        <div style="flex-grow: 1;text-align: right;">
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                        </div>
-                    </div>
+        <div class="col-md-6">
+            <img class="img-fluid float-right" src="assets/img/review_subtitle.svg"/>
+            <!-- <img class="img-fluid float-right" src="assets/img/goseeallreview2.svg"> -->
+        </div>
+    </div>
 
-                    <div style="height: 80%;display: flex;flex-direction: column;">
-                        <div>
-                            민희멀
-                        </div>
-                        <div style="flex-grow: 1;display: flex;align-items: center;">
-                            템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
-                            아직도 열기 및 몸
-                        </div>
-                        <div style="display: flex;flex-direction: row;">
-                            <div style="flex-grow: 1;">
-                                2022.1.1
-                            </div>
-                            <div style="flex-grow: 1;text-align: right;">
-                                <img src="assets/img/star.png" style="height: 20px;" />
-                                <img src="assets/img/star.png" style="height: 20px;" />
-                            </div>
-                        </div>
+    <div class="mb-5"></div>
+
+    <div class="row flex-row flex-nowrap overflow-scroll">
+        <!--  -->
+        <div style="border: 1px solid gray;height: 300px;width: 300px;">
+            <div style="display: flex;flex-direction: row;">
+                <div style="flex-grow: 1;">
+                    AS3
+                </div>
+                <div style="flex-grow: 1;text-align: right;">
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                </div>
+            </div>
+            <div style="height: 80%;display: flex;flex-direction: column;">
+                <div>
+                    민희멀
+                </div>
+                <div style="flex-grow: 1;display: flex;align-items: center;">
+                    템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
+                    아직도 열기 및 몸
+                </div>
+                <div style="display: flex;flex-direction: row;">
+                    <div style="flex-grow: 1;">
+                        2022.1.1
+                    </div>
+                    <div style="flex-grow: 1;text-align: right;">
+                        <img src="assets/img/star.png" style="height: 20px;" />
+                        <img src="assets/img/star.png" style="height: 20px;" />
                     </div>
                 </div>
-                <!--  -->
-                <!--  -->
-                <div class="fixed" style="border: 1px solid gray;">
-                    <div style="display: flex;flex-direction: row;">
-                        <div style="flex-grow: 1;">
-                            AS3
-                        </div>
-                        <div style="flex-grow: 1;text-align: right;">
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                        </div>
-                    </div>
-
-                    <div style="height: 80%;display: flex;flex-direction: column;">
-                        <div>
-                            민희멀
-                        </div>
-                        <div style="flex-grow: 1;display: flex;align-items: center;">
-                            템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
-                            아직도 열기 및 몸
-                        </div>
-                        <div style="display: flex;flex-direction: row;">
-                            <div style="flex-grow: 1;">
-                                2022.1.1
-                            </div>
-                            <div style="flex-grow: 1;text-align: right;">
-                                <img src="assets/img/star.png" style="height: 20px;" />
-                                <img src="assets/img/star.png" style="height: 20px;" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--  -->
-                <!--  -->
-                <div class="fixed" style="border: 1px solid gray;">
-                    <div style="display: flex;flex-direction: row;">
-                        <div style="flex-grow: 1;">
-                            AS3
-                        </div>
-                        <div style="flex-grow: 1;text-align: right;">
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                        </div>
-                    </div>
-
-                    <div style="height: 80%;display: flex;flex-direction: column;">
-                        <div>
-                            민희멀
-                        </div>
-                        <div style="flex-grow: 1;display: flex;align-items: center;">
-                            템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
-                            아직도 열기 및 몸
-                        </div>
-                        <div style="display: flex;flex-direction: row;">
-                            <div style="flex-grow: 1;">
-                                2022.1.1
-                            </div>
-                            <div style="flex-grow: 1;text-align: right;">
-                                <img src="assets/img/star.png" style="height: 20px;" />
-                                <img src="assets/img/star.png" style="height: 20px;" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--  -->
-                <!--  -->
-                <div class="fixed" style="border: 1px solid gray;">
-                    <div style="display: flex;flex-direction: row;">
-                        <div style="flex-grow: 1;">
-                            AS3
-                        </div>
-                        <div style="flex-grow: 1;text-align: right;">
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                        </div>
-                    </div>
-
-                    <div style="height: 80%;display: flex;flex-direction: column;">
-                        <div>
-                            민희멀
-                        </div>
-                        <div style="flex-grow: 1;display: flex;align-items: center;">
-                            템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
-                            아직도 열기 및 몸
-                        </div>
-                        <div style="display: flex;flex-direction: row;">
-                            <div style="flex-grow: 1;">
-                                2022.1.1
-                            </div>
-                            <div style="flex-grow: 1;text-align: right;">
-                                <img src="assets/img/star.png" style="height: 20px;" />
-                                <img src="assets/img/star.png" style="height: 20px;" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--  -->
-                <!--  -->
-                <div class="fixed" style="border: 1px solid gray;">
-                    <div style="display: flex;flex-direction: row;">
-                        <div style="flex-grow: 1;">
-                            AS3
-                        </div>
-                        <div style="flex-grow: 1;text-align: right;">
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                        </div>
-                    </div>
-
-                    <div style="height: 80%;display: flex;flex-direction: column;">
-                        <div>
-                            민희멀
-                        </div>
-                        <div style="flex-grow: 1;display: flex;align-items: center;">
-                            템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
-                            아직도 열기 및 몸
-                        </div>
-                        <div style="display: flex;flex-direction: row;">
-                            <div style="flex-grow: 1;">
-                                2022.1.1
-                            </div>
-                            <div style="flex-grow: 1;text-align: right;">
-                                <img src="assets/img/star.png" style="height: 20px;" />
-                                <img src="assets/img/star.png" style="height: 20px;" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--  -->
-                <!--  -->
-                <div class="fixed" style="border: 1px solid gray;">
-                    <div style="display: flex;flex-direction: row;">
-                        <div style="flex-grow: 1;">
-                            AS3
-                        </div>
-                        <div style="flex-grow: 1;text-align: right;">
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                        </div>
-                    </div>
-
-                    <div style="height: 80%;display: flex;flex-direction: column;">
-                        <div>
-                            민희멀
-                        </div>
-                        <div style="flex-grow: 1;display: flex;align-items: center;">
-                            템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
-                            아직도 열기 및 몸
-                        </div>
-                        <div style="display: flex;flex-direction: row;">
-                            <div style="flex-grow: 1;">
-                                2022.1.1
-                            </div>
-                            <div style="flex-grow: 1;text-align: right;">
-                                <img src="assets/img/star.png" style="height: 20px;" />
-                                <img src="assets/img/star.png" style="height: 20px;" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--  -->
-                <!--  -->
-                <div class="fixed" style="border: 1px solid gray;">
-                    <div style="display: flex;flex-direction: row;">
-                        <div style="flex-grow: 1;">
-                            AS3
-                        </div>
-                        <div style="flex-grow: 1;text-align: right;">
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                        </div>
-                    </div>
-
-                    <div style="height: 80%;display: flex;flex-direction: column;">
-                        <div>
-                            민희멀
-                        </div>
-                        <div style="flex-grow: 1;display: flex;align-items: center;">
-                            템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
-                            아직도 열기 및 몸
-                        </div>
-                        <div style="display: flex;flex-direction: row;">
-                            <div style="flex-grow: 1;">
-                                2022.1.1
-                            </div>
-                            <div style="flex-grow: 1;text-align: right;">
-                                <img src="assets/img/star.png" style="height: 20px;" />
-                                <img src="assets/img/star.png" style="height: 20px;" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--  -->
-                <!--  -->
-                <div class="fixed" style="border: 1px solid gray;">
-                    <div style="display: flex;flex-direction: row;">
-                        <div style="flex-grow: 1;">
-                            AS3
-                        </div>
-                        <div style="flex-grow: 1;text-align: right;">
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                        </div>
-                    </div>
-
-                    <div style="height: 80%;display: flex;flex-direction: column;">
-                        <div>
-                            민희멀
-                        </div>
-                        <div style="flex-grow: 1;display: flex;align-items: center;">
-                            템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
-                            아직도 열기 및 몸
-                        </div>
-                        <div style="display: flex;flex-direction: row;">
-                            <div style="flex-grow: 1;">
-                                2022.1.1
-                            </div>
-                            <div style="flex-grow: 1;text-align: right;">
-                                <img src="assets/img/star.png" style="height: 20px;" />
-                                <img src="assets/img/star.png" style="height: 20px;" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--  -->
-                <!--  -->
-                <div class="fixed" style="border: 1px solid gray;">
-                    <div style="display: flex;flex-direction: row;">
-                        <div style="flex-grow: 1;">
-                            AS3
-                        </div>
-                        <div style="flex-grow: 1;text-align: right;">
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                            <img src="assets/img/star.png" style="height: 20px;" />
-                        </div>
-                    </div>
-
-                    <div style="height: 80%;display: flex;flex-direction: column;">
-                        <div>
-                            민희멀
-                        </div>
-                        <div style="flex-grow: 1;display: flex;align-items: center;">
-                            템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
-                            아직도 열기 및 몸
-                        </div>
-                        <div style="display: flex;flex-direction: row;">
-                            <div style="flex-grow: 1;">
-                                2022.1.1
-                            </div>
-                            <div style="flex-grow: 1;text-align: right;">
-                                <img src="assets/img/star.png" style="height: 20px;" />
-                                <img src="assets/img/star.png" style="height: 20px;" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--  -->
             </div>
         </div>
-        <input type="range" class="form-range mt-2">
-        <div style="text-align: right;">
-            <img src="assets/img/goseeallreview.svg">
+        <!--  -->
+        <div style="border: 1px solid gray;height: 300px;width: 300px;">
+            <div style="display: flex;flex-direction: row;">
+                <div style="flex-grow: 1;">
+                    AS3
+                </div>
+                <div style="flex-grow: 1;text-align: right;">
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                </div>
+            </div>
+            <div style="height: 80%;display: flex;flex-direction: column;">
+                <div>
+                    민희멀
+                </div>
+                <div style="flex-grow: 1;display: flex;align-items: center;">
+                    템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
+                    아직도 열기 및 몸
+                </div>
+                <div style="display: flex;flex-direction: row;">
+                    <div style="flex-grow: 1;">
+                        2022.1.1
+                    </div>
+                    <div style="flex-grow: 1;text-align: right;">
+                        <img src="assets/img/star.png" style="height: 20px;" />
+                        <img src="assets/img/star.png" style="height: 20px;" />
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+        <!--  -->
+        <div style="border: 1px solid gray;height: 300px;width: 300px;">
+            <div style="display: flex;flex-direction: row;">
+                <div style="flex-grow: 1;">
+                    AS3
+                </div>
+                <div style="flex-grow: 1;text-align: right;">
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                </div>
+            </div>
+            <div style="height: 80%;display: flex;flex-direction: column;">
+                <div>
+                    민희멀
+                </div>
+                <div style="flex-grow: 1;display: flex;align-items: center;">
+                    템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
+                    아직도 열기 및 몸
+                </div>
+                <div style="display: flex;flex-direction: row;">
+                    <div style="flex-grow: 1;">
+                        2022.1.1
+                    </div>
+                    <div style="flex-grow: 1;text-align: right;">
+                        <img src="assets/img/star.png" style="height: 20px;" />
+                        <img src="assets/img/star.png" style="height: 20px;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div style="border: 1px solid gray;height: 300px;width: 300px;">
+            <div style="display: flex;flex-direction: row;">
+                <div style="flex-grow: 1;">
+                    AS3
+                </div>
+                <div style="flex-grow: 1;text-align: right;">
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                </div>
+            </div>
+            <div style="height: 80%;display: flex;flex-direction: column;">
+                <div>
+                    민희멀
+                </div>
+                <div style="flex-grow: 1;display: flex;align-items: center;">
+                    템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
+                    아직도 열기 및 몸
+                </div>
+                <div style="display: flex;flex-direction: row;">
+                    <div style="flex-grow: 1;">
+                        2022.1.1
+                    </div>
+                    <div style="flex-grow: 1;text-align: right;">
+                        <img src="assets/img/star.png" style="height: 20px;" />
+                        <img src="assets/img/star.png" style="height: 20px;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div style="border: 1px solid gray;height: 300px;width: 300px;">
+            <div style="display: flex;flex-direction: row;">
+                <div style="flex-grow: 1;">
+                    AS3
+                </div>
+                <div style="flex-grow: 1;text-align: right;">
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                </div>
+            </div>
+            <div style="height: 80%;display: flex;flex-direction: column;">
+                <div>
+                    민희멀
+                </div>
+                <div style="flex-grow: 1;display: flex;align-items: center;">
+                    템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
+                    아직도 열기 및 몸
+                </div>
+                <div style="display: flex;flex-direction: row;">
+                    <div style="flex-grow: 1;">
+                        2022.1.1
+                    </div>
+                    <div style="flex-grow: 1;text-align: right;">
+                        <img src="assets/img/star.png" style="height: 20px;" />
+                        <img src="assets/img/star.png" style="height: 20px;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div style="border: 1px solid gray;height: 300px;width: 300px;">
+            <div style="display: flex;flex-direction: row;">
+                <div style="flex-grow: 1;">
+                    AS3
+                </div>
+                <div style="flex-grow: 1;text-align: right;">
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                </div>
+            </div>
+            <div style="height: 80%;display: flex;flex-direction: column;">
+                <div>
+                    민희멀
+                </div>
+                <div style="flex-grow: 1;display: flex;align-items: center;">
+                    템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
+                    아직도 열기 및 몸
+                </div>
+                <div style="display: flex;flex-direction: row;">
+                    <div style="flex-grow: 1;">
+                        2022.1.1
+                    </div>
+                    <div style="flex-grow: 1;text-align: right;">
+                        <img src="assets/img/star.png" style="height: 20px;" />
+                        <img src="assets/img/star.png" style="height: 20px;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div style="border: 1px solid gray;height: 300px;width: 300px;">
+            <div style="display: flex;flex-direction: row;">
+                <div style="flex-grow: 1;">
+                    AS3
+                </div>
+                <div style="flex-grow: 1;text-align: right;">
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                </div>
+            </div>
+            <div style="height: 80%;display: flex;flex-direction: column;">
+                <div>
+                    민희멀
+                </div>
+                <div style="flex-grow: 1;display: flex;align-items: center;">
+                    템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
+                    아직도 열기 및 몸
+                </div>
+                <div style="display: flex;flex-direction: row;">
+                    <div style="flex-grow: 1;">
+                        2022.1.1
+                    </div>
+                    <div style="flex-grow: 1;text-align: right;">
+                        <img src="assets/img/star.png" style="height: 20px;" />
+                        <img src="assets/img/star.png" style="height: 20px;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div style="border: 1px solid gray;height: 300px;width: 300px;">
+            <div style="display: flex;flex-direction: row;">
+                <div style="flex-grow: 1;">
+                    AS3
+                </div>
+                <div style="flex-grow: 1;text-align: right;">
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                </div>
+            </div>
+            <div style="height: 80%;display: flex;flex-direction: column;">
+                <div>
+                    민희멀
+                </div>
+                <div style="flex-grow: 1;display: flex;align-items: center;">
+                    템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
+                    아직도 열기 및 몸
+                </div>
+                <div style="display: flex;flex-direction: row;">
+                    <div style="flex-grow: 1;">
+                        2022.1.1
+                    </div>
+                    <div style="flex-grow: 1;text-align: right;">
+                        <img src="assets/img/star.png" style="height: 20px;" />
+                        <img src="assets/img/star.png" style="height: 20px;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div style="border: 1px solid gray;height: 300px;width: 300px;">
+            <div style="display: flex;flex-direction: row;">
+                <div style="flex-grow: 1;">
+                    AS3
+                </div>
+                <div style="flex-grow: 1;text-align: right;">
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                    <img src="assets/img/star.png" style="height: 20px;" />
+                </div>
+            </div>
+            <div style="height: 80%;display: flex;flex-direction: column;">
+                <div>
+                    민희멀
+                </div>
+                <div style="flex-grow: 1;display: flex;align-items: center;">
+                    템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
+                    아직도 열기 및 몸
+                </div>
+                <div style="display: flex;flex-direction: row;">
+                    <div style="flex-grow: 1;">
+                        2022.1.1
+                    </div>
+                    <div style="flex-grow: 1;text-align: right;">
+                        <img src="assets/img/star.png" style="height: 20px;" />
+                        <img src="assets/img/star.png" style="height: 20px;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+    </div>
+    
+    <input type="range" class="form-range mt-2">
+    <div style="text-align: right;">
+        <img src="assets/img/goseeallreview.svg">
+    </div>
 
     <div class="row" style="background-color: #F7F8FC;">        
         <div class="col-lg-4 col-sm-12" style="display: flex;flex-direction: column;justify-content: center;">
@@ -713,6 +715,22 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 3000); // Change image every 2 seconds
+        }
+    </script>
 </body>
 
 </html>
