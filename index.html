@@ -144,7 +144,18 @@
         @media only screen and (max-width: 700px) {
             .box {
                 box-shadow: 2px 12px 8px -4px rgba(31, 73, 125, 0.8);
-                background-color: white;bottom: 5px;border: 1px solid gray;right: 11px;
+                background-color: white;bottom: 25px;border: 1px solid gray;right: 11px; opacity: 0.7;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+            .review_subtitle{
+                display: none;
+            }
+            .mobileprint{
+                visibility: visible;
+            }
+            .pcprint{
+                visibility: hidden;
             }
         }
 
@@ -152,7 +163,12 @@
             content:url('assets/img/buyingguide.svg');
             width: 100%;
         }
-
+        .mobileprint{
+            visibility: hidden;
+        }
+        .pcprint{
+            visibility: visible;
+        }
     </style>
 </head>
 
@@ -235,7 +251,7 @@
       </nav>
 
     <!-- Masthead-->
-    <header class="masthead position-relative" style="height: 500px;">
+    <header class="masthead position-relative" style="height: 400px;">
         <div class="container">
             <!-- <div class="masthead-subheading">Welcome To Our Studio!</div>
                 <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
@@ -270,7 +286,11 @@
                     style="position: absolute;background-color: #10376D;width: 100%;height: 6px;bottom: 0;display: none;">
                 </div>
             </div>
+            <div style="width: 20px;height: 100%;position: absolute;left: 0;display: flex;">
+                <img src="assets/img/rightarrow.svg" style="align-self: center;width: 20px;"/>
+            </div>
         </div>
+        
     </header>
 
     <!-- Services-->
@@ -316,7 +336,6 @@
                     <h6 style="font-family: NotoSansCJKkr-Regular;max-width: 250px;">메모리폼의 오리지널리티, 미국 제조 아메리슬립</h6>
                 </div>
             </div>
-
         </section>
 
     </div>
@@ -350,7 +369,8 @@
     <section class="col-md-12" style="background-color: #F7F8FC;">
         <div class="mb-5" style="padding-left: 10px;padding-right: 10px;">
             <img class="img-fluid" src="assets/img/review.svg"  style="height: 50px;"/>
-            <img class="img-fluid" src="assets/img/review_subtitle.svg" style="width: 40%;float: right;" />
+            <img class="img-fluid pcprint" src="assets/img/review_subtitle.svg" style="width: 40%;float: right;" />
+            <img class="img-fluid mobileprint" src="assets/img/goseeallreview2.svg">
         </div>
         <div class="container-fluid">
             <div class="row flex-row flex-nowrap overflow-scroll">
