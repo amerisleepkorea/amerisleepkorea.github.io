@@ -1,0 +1,166 @@
+.box {
+    box-shadow: 2px 12px 8px -4px rgba(31, 73, 125, 0.8);
+    background-color: white;
+    bottom: -50px;
+    border: 1px solid gray;
+    right: 11px;
+}
+@font-face {
+    font-family: NotoSansCJKkr;
+    src: url("assets/font/NotoSansCJKkr-Black.otf") format("opentype")
+}
+
+@font-face {
+    font-family: NotoSansCJKkr-Bold;
+    src: url("assets/font/NotoSansCJKkr-Bold.otf") format("opentype")
+}
+
+@font-face {
+    font-family: NotoSansCJKkr-DemiLight;
+    src: url("assets/font/NotoSansCJKkr-DemiLight.otf") format("opentype")
+}
+
+@font-face {
+    font-family: NotoSansCJKkr-Light;
+    src: url("assets/font/NotoSansCJKkr-Light.otf") format("opentype")
+}
+
+@font-face {
+    font-family: NotoSansCJKkr-Medium;
+    src: url("assets/font/NotoSansCJKkr-Medium.otf") format("opentype")
+}
+
+@font-face {
+    font-family: NotoSansCJKkr-Regular;
+    src: url("assets/font/NotoSansCJKkr-Regular.otf") format("opentype")
+}
+
+@font-face {
+    font-family: NotoSansCJKkr-Thin;
+    src: url("assets/font/NotoSansCJKkr-Thin.otf") format("opentype")
+}
+
+@font-face {
+    font-family: Eina01_Bold;
+    src: url("assets/font/Eina01_Bold.otf") format("opentype")
+}
+
+@font-face {
+    font-family: Eina01_Light;
+    src: url("assets/font/Eina01_Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Eina01_Regular;
+    src: url("assets/font/Eina01_Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Eina01_SemiBold;
+    src: url("assets/font/Eina01_SemiBold.otf") format("opentype");
+}
+
+.fixed {
+    width: 300px;
+    height: 300px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #000000;
+    height: 15px;
+    width: 120px;
+    border-radius: 3px;
+    background: #10376D;
+    cursor: pointer;
+    margin-top: -7px;
+    /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 1px 1px 1px #10376D, 0px 0px 1px #0d0d0d;
+    /* Add cool effects to your sliders! */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #10376D, 0px 0px 1px #0d0d0d;
+    border: 1px solid #10376D;
+    height: 15px;
+    width: 120px;
+    border-radius: 3px;
+    background: #10376D;
+    cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #10376D, 0px 0px 1px #0d0d0d;
+    border: 1px solid #10376D;
+    height: 15px;
+    width: 120px;
+    border-radius: 3px;
+    background: #10376D;
+    cursor: pointer;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    background-color: #10376D;
+    height: 2px;
+}
+
+input[type="range"]::-moz-range-progress {
+    background-color: #10376D;
+}
+
+input[type="range"]::-moz-range-track {
+    background-color: #10376D;
+}
+
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+    background-color: #10376D;
+}
+
+input[type="range"]::-ms-fill-upper {
+    background-color: #10376D;
+}
+
+@media only screen and (max-width: 700px) {
+    .box {
+        box-shadow: 2px 12px 8px -4px rgba(31, 73, 125, 0.8);
+        background-color: white;
+        bottom: 25px;
+        border: 1px solid gray;
+        right: 11px;
+        opacity: 0.7;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .review_subtitle {
+        display: none;
+    }
+
+    .mobileprint {
+        display: block;
+    }
+
+    .pcprint {
+        display: none;
+    }
+}
+
+.buyingguide {
+    content: url('assets/img/buyingguide.svg');
+    width: 100%;
+}
+
+.mobileprint {
+    display: none;
+}
+
+.pcprint {
+    display: block;
+}
