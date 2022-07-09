@@ -345,7 +345,7 @@
                     <div class="bg2"></div>
                 </div> -->
                 <div class="slide">
-                    <video id="myVideo" class="myVideo">
+                    <video id="myVideo" class="myVideo" autoplay>
                         <source src="https://amerisleep-bucket.s3.ap-northeast-2.amazonaws.com/video/main.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -840,7 +840,7 @@
                 index++;
                 if (index === slides.length) index = 0;
                 slides[index].classList.add('active');
-                if (index == 2) {
+                if (index == 0) {
                     var vid = document.getElementById("myVideo");
                     vid.play();
                 } else {
@@ -859,8 +859,6 @@
                 $('#box').removeClass("closeside");    
                 $('#box').addClass("openside");
             }
-            
-            
         }
     </script>
 </body>
