@@ -262,7 +262,15 @@
 
         }
 
-        
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .hidescroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE and Edge */
+        .hidescroll {
+            -ms-overflow-style: none;
+        }
     </style>
 </head>
 
@@ -373,7 +381,7 @@
             <div style="margin-bottom: 50px;">
                 <img src="assets/img/whyamerisleep.svg" style="height: 50px;" />
             </div>
-            <div class="row flex-row flex-nowrap overflow-scroll overflow-hidden">
+            <div class="row flex-row flex-nowrap overflow-scroll hidescroll">
                 <div class="col-md-3 col-sm-6 mb-3">
                     <img src="assets/img/icon04.svg" style="height: 50px;margin-left: 30px;" />
                     <div class="mb-5"></div>
@@ -411,7 +419,7 @@
 
     </div>
 
-    <div class="row flex-row flex-nowrap overflow-scroll overflow-hidden justify-content-md-center"
+    <div class="row flex-row flex-nowrap overflow-scroll justify-content-md-center hidescroll"
         style="background-color: #F7F8FC;">
         <div class="col-md-2 col-sm-2"
             style="height: 150px;display: flex;flex-direction: column;justify-content: center;">
@@ -456,7 +464,7 @@
 
     <div class="mb-5"></div>
 
-    <div class="row flex-row flex-nowrap overflow-scroll">
+    <div class="row flex-row flex-nowrap overflow-scroll hidescroll">
         <!--  -->
         <div style="border: 1px solid gray;height: 300px;width: 300px;">
             <div style="display: flex;flex-direction: row;">
