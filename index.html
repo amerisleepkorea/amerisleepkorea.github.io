@@ -196,16 +196,18 @@
             }
 
             .openside{
-                transform: translateX(415px);
-                -webkit-transform: translateX(415px);
-                -moz-transform: translateX(415px);
-                -o-transform: translateX(415px); 
+                transform: translate(190px, 20px);
+                -webkit-transform: translate(190px, 20px);
+                -moz-transform: translate(190px, 20px);
+                -o-transform: translate(190px, 20px);
+                transition-duration: 1s;
             }
             .closeside{
-                transform: translateX(0px);
-                -webkit-transform: translateX(0px);
-                -moz-transform: translateX(0px);
-                -o-transform: translateX(0px); 
+                transform: translate(0px, 20px);
+                -webkit-transform: translate(0px, 20px);
+                -moz-transform: translate(0px, 20px);
+                -o-transform: translate(0px, 20px); 
+                transition-duration: 1s;
             }
             .myVideo{
                 position: absolute;top: 0;width: 100vw;object-fit: cover;height: 400px;
@@ -360,6 +362,7 @@
         <div class="container">
             <img src="assets/img/bestsleep.svg" style="width: 30%;">
         </div>
+
         <div id="box" class="position-absolute row col-7 col-md-7 box">
             <div class="col-md-4 d-flex position-relative justify-content-center"
                 style="padding: 10px 0 10px 0;border-right: 1px solid gray;">
@@ -391,7 +394,13 @@
                     style="position: absolute;background-color: #10376D;width: 100%;height: 6px;bottom: 0;display: none;">
                 </div>
             </div>
-            <div style="width: 20px;height: 100%;position: absolute;left: 0;display: flex;" onclick="moveBox();">
+            <div style="width: 30px;height: 100%;position: absolute;left: 0;display: flex;" onclick="moveBox();">
+                <img src="assets/img/rightarrow.svg" style="align-self: center;width: 30px;" />
+            </div>
+        </div>
+
+        <div id="sidebox" class="position-absolute row col-7 col-md-7 box" style="height: 271px;width: 30px;visibility: hidden;margin: 0;right: 0;padding: 0;">
+            <div style="width: 30px;height: 100%;left: 0;display: flex;" onclick="moveBox2();">
                 <img src="assets/img/rightarrow.svg" style="align-self: center;width: 20px;" />
             </div>
         </div>
@@ -832,6 +841,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
     <script>
+        let isOpen = false;
         var slideshows = document.querySelectorAll('[data-component="slideshow"]');
         slideshows.forEach(initSlideShow);
         function initSlideShow(slideshow) {
@@ -852,17 +862,40 @@
                 }
             }, time);
         }
+        
         function moveBox(){
-            const nowclass = $('#box').attr('class');
-            console.log('nowclass : '+nowclass);
-            if (nowclass.includes('openside')) {
-                $('#box').removeClass("openside");    
-                $('#box').addClass("closeside");
-            }else{
+            // const nowclass = $('#box').attr('class');
+            // console.log('nowclass : '+nowclass);
+            // if (nowclass.includes('openside')) {
+                // $('#box').removeClass("openside");    
+                // $('#box').addClass("closeside");
+            // }else{
                 $('#box').removeClass("closeside");    
                 $('#box').addClass("openside");
-            }
+            // }
         }
+
+        function moveBox2(){
+            $("#sidebox").css('visibility', 'hidden');
+            $("#sidebox").css('display', 'none');
+            $("#box").show();
+            $('#box').removeClass("openside");    
+            $('#box').addClass("closeside");
+        }
+
+        const box = document.getElementById('box');
+        box.addEventListener('transitionend', function( event ) { 
+            console.log(isOpen);
+            if (isOpen) {
+                isOpen = false;
+            } else {
+                isOpen = true;
+                $("#box").hide();
+                $("#sidebox").css('visibility', 'visible');
+                $("#sidebox").css('display', 'block');    
+            }
+        }, true );
+
     </script>
 </body>
 
