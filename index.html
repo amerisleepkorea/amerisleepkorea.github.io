@@ -218,7 +218,7 @@
                 transition-duration: 1s;
             }
 
-            .myVideo {
+            .ASVideo {
                 position: absolute;
                 top: 0;
                 width: 100vw;
@@ -275,7 +275,7 @@
                 height: 600px;
             }
 
-            .myVideo {
+            .ASVideo {
                 position: absolute;
                 top: 0;
                 width: 100vw;
@@ -376,7 +376,7 @@
         <div id="slideshow-example" class="slideshow" data-component="slideshow">
             <div role="list">
                 <div class="slide">
-                    <video id="myVideo" class="myVideo" autoplay>
+                    <video id="ASVideo" class="ASVideo" autoplay>
                         <source src="https://amerisleep-bucket.s3.ap-northeast-2.amazonaws.com/video/main.mp4"
                             type="video/mp4">
                     </video>
@@ -889,10 +889,10 @@
                 if (index === slides.length) index = 0;
                 slides[index].classList.add('active');
                 if (index == 0) {
-                    var vid = document.getElementById("myVideo");
+                    var vid = document.getElementById("ASVideo");
                     vid.play();
                 } else {
-                    var vid = document.getElementById("myVideo");
+                    var vid = document.getElementById("ASVideo");
                     vid.pause();
                 }
             }, time);
