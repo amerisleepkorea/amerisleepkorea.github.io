@@ -305,6 +305,14 @@
     </style>
 
 
+    <script type="text/javascript">
+        $(window).on('load', function () {
+            $('#myModal').modal('show');
+        });
+    </script>
+
+</head>
+
 <body id="page-top">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container-fluid">
@@ -936,12 +944,6 @@
 
     </script>
 
-    <script type="text/javascript">
-        $(window).on('load', function () {
-            $('#myModal').modal('show');
-        });
-    </script>
-
     <div id="myModal" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -953,7 +955,7 @@
                                 alt="" class="img">
                         </a>
                     </div>
-                    <div style="display: flex;flex-direction: row;justify-content: flex-end;align-items: center;">
+                    <div class="d-flex justify-content-end align-items-center">
                         <label class="div textArae" for="todayno">오늘 하루 보지 않음</label>
                         <input type="checkbox" onclick="closePop(19)" style="margin-left: 10px;">
                         <button class="cansle_main_pop" onclick="$('#myModal').modal('hide')"></button>
