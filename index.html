@@ -889,11 +889,15 @@
                 if (index === slides.length) index = 0;
                 slides[index].classList.add('active');
                 if (index == 0) {
-                    var vid = document.getElementById("ASVideo");
-                    vid.play();
+                    const vid = document.getElementById("ASVideo");
+                    if (vid.readyState === 4) {
+                        vid.play();
+                    }
                 } else {
-                    var vid = document.getElementById("ASVideo");
-                    vid.pause();
+                    const vid = document.getElementById("ASVideo");
+                    if (vid.readyState === 4) {
+                        vid.pause();
+                    }
                 }
             }, time);
         }
