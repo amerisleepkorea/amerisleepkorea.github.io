@@ -590,7 +590,7 @@
 
     <div class="mb-3"></div>
 
-    <input type="range" class="form-range mt-2" style="padding-left: 20px;padding-right: 20px;">
+    <input type="range" class="form-range mt-2" style="padding-left: 20px;padding-right: 20px;" min="0" max="10" value="0" onchange="showVal(this.value)">
 
     <div class="mb-3"></div>
 
@@ -755,6 +755,12 @@
 
         for(var i =0;i<10;i++){
             $("#list").append(PutData('AS1', '홍길동', '2022.1.1', 5, '템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는 아직도 열기 및 몸'));
+        }
+
+        function showVal(index){
+            let gap = 300*index
+            console.log(gap);
+            $('#list').scrollLeft( gap );
         }
         
     </script>
