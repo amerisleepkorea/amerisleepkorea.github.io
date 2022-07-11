@@ -24,13 +24,13 @@
             margin-right: 2px;
         }
 
-        .box {
+        /* .box {
             box-shadow: 2px 12px 8px -4px rgba(31, 73, 125, 0.8);
             background-color: white;
             bottom: -50px;
             border: 1px solid gray;
             right: 11px;
-        }
+        } */
 
         @font-face {
             font-family: NotoSansCJKkr;
@@ -151,6 +151,18 @@
 
         @media only screen and (max-width: 770px) {
 
+            .sidebox{
+                box-shadow: 2px 12px 8px -4px rgba(31, 73, 125, 0.8);
+                background-color: white;
+                border: 1px solid gray;
+                right: 11px;
+                opacity: 0.7;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                transform: translateY(-180px);
+                display: block;
+            }
+
             .box {
                 box-shadow: 2px 12px 8px -4px rgba(31, 73, 125, 0.8);
                 background-color: white;
@@ -159,7 +171,8 @@
                 opacity: 0.7;
                 border-top-left-radius: 10px;
                 border-bottom-left-radius: 10px;
-                transform: translateY(-70px);
+                transform: translateY(-180px);
+                display: none;
             }
 
             .review_subtitle {
@@ -202,22 +215,6 @@
                 height: 400px;
             }
 
-            .openside {
-                transform: translate(190px, -70px);
-                -webkit-transform: translate(190px, -70px);
-                -moz-transform: translate(190px, -70px);
-                -o-transform: translate(190px, -70px);
-                transition-duration: 1s;
-            }
-
-            .closeside {
-                transform: translate(0px, -70px);
-                -webkit-transform: translate(0px, -70px);
-                -moz-transform: translate(0px, -70px);
-                -o-transform: translate(0px, -70px);
-                transition-duration: 1s;
-            }
-
             .ASVideo {
                 position: absolute;
                 top: 0;
@@ -234,6 +231,7 @@
             .movietitle{
                 width: 50%;
             }
+
         }
 
         .buyingguide {
@@ -247,6 +245,23 @@
         }
 
         @media only screen and (min-width: 770px) {
+
+            .sidebox{
+                box-shadow: 2px 12px 8px -4px rgba(31, 73, 125, 0.8);
+                background-color: white;
+                bottom: -50px;
+                border: 1px solid gray;
+                right: 11px;
+                display: none;
+            }
+
+            .box {
+                box-shadow: 2px 12px 8px -4px rgba(31, 73, 125, 0.8);
+                background-color: white;
+                bottom: -50px;
+                border: 1px solid gray;
+                right: 11px;
+            }
 
             .mobileprint {
                 display: none;
@@ -416,7 +431,7 @@
             </div>
         </div>
 
-        <div id="box" class="position-absolute row col-7 col-md-7 box" style="display: none;">
+        <div id="box" class="position-absolute row col-7 col-md-7 box">
             <div class="col-md-4 d-flex position-relative justify-content-center"
                 style="padding: 10px 0 10px 0;border-right: 1px solid gray;">
                 <div class="align-self-center"
@@ -447,12 +462,12 @@
                     style="position: absolute;background-color: #10376D;width: 100%;height: 6px;bottom: 0;display: none;">
                 </div>
             </div>
-            <div style="width: 30px;height: 100%;position: absolute;left: 0;display: flex;" onclick="ASmoveLeftToRight();">
+            <div style="width: 30px;height: 100%;position: absolute;left: 0;top: 0;display: flex;" onclick="ASmoveLeftToRight();">
                 <img class="img-fluid" src="assets/img/rightarrow.svg" style="align-self: center;width: 30px;" />
             </div>
         </div>
 
-        <div id="sidebox" class="position-absolute row col-7 col-md-7 box"
+        <div id="sidebox" class="position-absolute row col-7 col-md-7 sidebox"
             style="height: 271px;width: 30px;margin: 0;right: 0;padding: 0;">
             <div style="width: 30px;height: 100%;left: 0;display: flex;" onclick="ASmoveRightToLeft();">
                 <img class="img-fluid" src="assets/img/rightarrow.svg" style="align-self: center;width: 20px;" />
@@ -929,16 +944,31 @@
         }
 
         function ASmoveLeftToRight() {
-            $('#box').removeClass("closeside");
-            $('#box').addClass("openside");
+            $("#box").animate({
+                right: "-250px"
+            }, 1000, function() {
+                $("#sidebox").css('visibility', 'visible');
+                $("#sidebox").css('display', 'block');
+                $("#box").css('visibility', 'hidden');
+                $("#box").css('display', 'none');
+            });
         }
 
         function ASmoveRightToLeft() {
+            isOpen = false;
             $("#sidebox").css('visibility', 'hidden');
             $("#sidebox").css('display', 'none');
-            $("#box").show();
-            $('#box').removeClass("openside");
-            $('#box').addClass("closeside");
+            $("#box").css('visibility', 'visible');
+            $("#box").css('display', 'block');
+            $("#box").animate({
+                right: "-250px"
+            }, 0, function() {
+                $("#box").animate({
+                right: "10px"
+                }, 1000, function() {
+                    
+                });    
+            });
         }
 
         const box = document.getElementById('box');
