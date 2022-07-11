@@ -416,7 +416,7 @@
             </div>
         </div>
 
-        <div id="box" class="position-absolute row col-7 col-md-7 box">
+        <div id="box" class="position-absolute row col-7 col-md-7 box" style="display: none;">
             <div class="col-md-4 d-flex position-relative justify-content-center"
                 style="padding: 10px 0 10px 0;border-right: 1px solid gray;">
                 <div class="align-self-center"
@@ -453,7 +453,7 @@
         </div>
 
         <div id="sidebox" class="position-absolute row col-7 col-md-7 box"
-            style="height: 271px;width: 30px;visibility: hidden;margin: 0;right: 0;padding: 0;">
+            style="height: 271px;width: 30px;margin: 0;right: 0;padding: 0;">
             <div style="width: 30px;height: 100%;left: 0;display: flex;" onclick="ASmoveRightToLeft();">
                 <img class="img-fluid" src="assets/img/rightarrow.svg" style="align-self: center;width: 20px;" />
             </div>
@@ -900,7 +900,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
     <script>
-        let isOpen = false;
+        let isOpen = true;
         var slideshows = document.querySelectorAll('[data-component="slideshow"]');
         slideshows.forEach(initSlideShow);
         function initSlideShow(slideshow) {
