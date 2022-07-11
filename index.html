@@ -159,7 +159,7 @@
                 opacity: 0.7;
                 border-top-left-radius: 10px;
                 border-bottom-left-radius: 10px;
-                transform: translateY(20px);
+                transform: translateY(-70px);
             }
 
             .review_subtitle {
@@ -203,18 +203,18 @@
             }
 
             .openside {
-                transform: translate(190px, 20px);
-                -webkit-transform: translate(190px, 20px);
-                -moz-transform: translate(190px, 20px);
-                -o-transform: translate(190px, 20px);
+                transform: translate(190px, -70px);
+                -webkit-transform: translate(190px, -70px);
+                -moz-transform: translate(190px, -70px);
+                -o-transform: translate(190px, -70px);
                 transition-duration: 1s;
             }
 
             .closeside {
-                transform: translate(0px, 20px);
-                -webkit-transform: translate(0px, 20px);
-                -moz-transform: translate(0px, 20px);
-                -o-transform: translate(0px, 20px);
+                transform: translate(0px, -70px);
+                -webkit-transform: translate(0px, -70px);
+                -moz-transform: translate(0px, -70px);
+                -o-transform: translate(0px, -70px);
                 transition-duration: 1s;
             }
 
@@ -224,6 +224,15 @@
                 width: 100vw;
                 object-fit: cover;
                 height: 400px;
+            }
+
+            .bestsleep{
+                width: 60%;
+                margin-top: 50px;
+            }
+
+            .movietitle{
+                width: 50%;
             }
         }
 
@@ -283,6 +292,14 @@
                 height: 600px;
             }
 
+            .bestsleep{
+                width: 80%;
+            }
+
+            .movietitle{
+                width: 60%;
+            }
+
         }
 
         .hidescroll::-webkit-scrollbar {
@@ -302,6 +319,7 @@
             margin-left: 10px;
             margin-right: 10px;
         }
+        
     </style>
 
 
@@ -388,8 +406,14 @@
         </div>
 
 
-        <div class="container">
-            <img class="img-fluid" src="assets/img/bestsleep.svg" style="width: 30%;">
+        <div class="container" style="height: 120px;"></div>
+
+        <div class="position-absolute container d-flex align-items-center justify-content-center" style="top: 0;bottom: 0;right: 0;left: 0;">
+            <div class="d-flex flex-column align-items-center">
+                <img id="bestsleep" class="img-fluid bestsleep" src="assets/img/bestsleep.svg">
+                <div class="mb-3"></div>
+                <img id="movietitle" class="img-fluid movietitle" src="assets/img/movietitle.png" onclick="location.href='https://www.amerisleep.kr/purchase/mattresses/index?type=memoryfoam'">
+            </div>
         </div>
 
         <div id="box" class="position-absolute row col-7 col-md-7 box">
@@ -437,7 +461,7 @@
 
     </header>
 
-    <div style="height: 110px;"></div>
+    <div style="height: 50px;"></div>
     <div class="mb-3"></div>
 
     <div class="row" style="margin: 0;">
@@ -893,11 +917,13 @@
                     if (vid.readyState === 4) {
                         vid.play();
                     }
+                    $('#movietitle').show();
                 } else {
                     const vid = document.getElementById("ASVideo");
                     if (vid.readyState === 4) {
                         vid.pause();
                     }
+                    $('#movietitle').hide();
                 }
             }, time);
         }
