@@ -311,7 +311,7 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" onscroll="myFunction()">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div id="tg" class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -606,7 +606,7 @@
         slideshows.forEach(initSlideShow);
         function initSlideShow(slideshow) {
             var slides = document.querySelectorAll(`#${slideshow.id} [role="list"] .slide`);
-            var index = 0, time = 2000;
+            var index = 0, time = 10000;
             slides[index].classList.add('active');
             setInterval(() => {
                 slides[index].classList.remove('active');
@@ -706,6 +706,10 @@
             // console.log("show");
             $('#mainNav').css('background-color', '#212529')
         });
+
+        function myFunction(index){
+            console.log(index);
+        }
 
     </script>
 
