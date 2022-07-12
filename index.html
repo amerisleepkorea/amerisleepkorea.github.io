@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/slideshow.css" rel="stylesheet" />
+    <link href="css/font.css" rel="stylesheet" />
     <style>
         .commentbox {
             border: 1px solid gray;
@@ -24,74 +26,21 @@
             margin-right: 2px;
         }
 
-        .box {
-            box-shadow: 2px 12px 8px -4px rgba(31, 73, 125, 0.8);
-            background-color: white;
-            bottom: -50px;
-            border: 1px solid gray;
-            right: 11px;
-        }
-
-        @font-face {
-            font-family: NotoSansCJKkr;
-            src: url("assets/font/NotoSansCJKkr-Black.otf") format("opentype")
-        }
-
-        @font-face {
-            font-family: NotoSansCJKkr-Bold;
-            src: url("assets/font/NotoSansCJKkr-Bold.otf") format("opentype")
-        }
-
-        @font-face {
-            font-family: NotoSansCJKkr-DemiLight;
-            src: url("assets/font/NotoSansCJKkr-DemiLight.otf") format("opentype")
-        }
-
-        @font-face {
-            font-family: NotoSansCJKkr-Light;
-            src: url("assets/font/NotoSansCJKkr-Light.otf") format("opentype")
-        }
-
-        @font-face {
-            font-family: NotoSansCJKkr-Medium;
-            src: url("assets/font/NotoSansCJKkr-Medium.otf") format("opentype")
-        }
-
-        @font-face {
-            font-family: NotoSansCJKkr-Regular;
-            src: url("assets/font/NotoSansCJKkr-Regular.otf") format("opentype")
-        }
-
-        @font-face {
-            font-family: NotoSansCJKkr-Thin;
-            src: url("assets/font/NotoSansCJKkr-Thin.otf") format("opentype")
-        }
-
-        @font-face {
-            font-family: Eina01_Bold;
-            src: url("assets/font/Eina01_Bold.otf") format("opentype")
-        }
-
-        @font-face {
-            font-family: Eina01_Light;
-            src: url("assets/font/Eina01_Light.otf") format("opentype");
-        }
-
-        @font-face {
-            font-family: Eina01_Regular;
-            src: url("assets/font/Eina01_Regular.otf") format("opentype");
-        }
-
-        @font-face {
-            font-family: Eina01_SemiBold;
-            src: url("assets/font/Eina01_SemiBold.otf") format("opentype");
-        }
-
         .fixed {
             width: 300px;
             height: 300px;
             margin-left: 2px;
             margin-right: 2px;
+        }
+
+        .buyingguide {
+            content: url('assets/img/buyingguide.svg');
+            width: 100%;
+        }
+
+        .buyingguide2 {
+            content: url('assets/img/buyingguide2.svg');
+            width: 100%;
         }
 
         input[type=range]::-webkit-slider-thumb {
@@ -151,6 +100,18 @@
 
         @media only screen and (max-width: 770px) {
 
+            .sidebox {
+                box-shadow: 2px 12px 8px -4px rgba(31, 73, 125, 0.8);
+                background-color: white;
+                border: 1px solid gray;
+                right: 11px;
+                opacity: 0.7;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                transform: translateY(-180px);
+                display: block;
+            }
+
             .box {
                 box-shadow: 2px 12px 8px -4px rgba(31, 73, 125, 0.8);
                 background-color: white;
@@ -159,7 +120,8 @@
                 opacity: 0.7;
                 border-top-left-radius: 10px;
                 border-bottom-left-radius: 10px;
-                transform: translateY(-70px);
+                transform: translateY(-180px);
+                display: none;
             }
 
             .review_subtitle {
@@ -202,22 +164,6 @@
                 height: 400px;
             }
 
-            .openside {
-                transform: translate(190px, -70px);
-                -webkit-transform: translate(190px, -70px);
-                -moz-transform: translate(190px, -70px);
-                -o-transform: translate(190px, -70px);
-                transition-duration: 1s;
-            }
-
-            .closeside {
-                transform: translate(0px, -70px);
-                -webkit-transform: translate(0px, -70px);
-                -moz-transform: translate(0px, -70px);
-                -o-transform: translate(0px, -70px);
-                transition-duration: 1s;
-            }
-
             .ASVideo {
                 position: absolute;
                 top: 0;
@@ -226,27 +172,35 @@
                 height: 400px;
             }
 
-            .bestsleep{
+            .bestsleep {
                 width: 60%;
                 margin-top: 50px;
             }
 
-            .movietitle{
+            .movietitle {
                 width: 50%;
             }
-        }
 
-        .buyingguide {
-            content: url('assets/img/buyingguide.svg');
-            width: 100%;
-        }
-
-        .buyingguide2 {
-            content: url('assets/img/buyingguide2.svg');
-            width: 100%;
         }
 
         @media only screen and (min-width: 770px) {
+
+            .sidebox {
+                box-shadow: 2px 12px 8px -4px rgba(31, 73, 125, 0.8);
+                background-color: white;
+                bottom: -50px;
+                border: 1px solid gray;
+                right: 11px;
+                display: none;
+            }
+
+            .box {
+                box-shadow: 2px 12px 8px -4px rgba(31, 73, 125, 0.8);
+                background-color: white;
+                bottom: -50px;
+                border: 1px solid gray;
+                right: 11px;
+            }
 
             .mobileprint {
                 display: none;
@@ -292,11 +246,11 @@
                 height: 600px;
             }
 
-            .bestsleep{
+            .bestsleep {
                 width: 80%;
             }
 
-            .movietitle{
+            .movietitle {
                 width: 60%;
             }
 
@@ -319,7 +273,6 @@
             margin-left: 10px;
             margin-right: 10px;
         }
-        
     </style>
 
 
@@ -408,21 +361,23 @@
 
         <div class="container" style="height: 120px;"></div>
 
-        <div class="position-absolute container d-flex align-items-center justify-content-center" style="top: 0;bottom: 0;right: 0;left: 0;">
+        <div class="position-absolute container d-flex align-items-center justify-content-center"
+            style="top: 0;bottom: 0;right: 0;left: 0;">
             <div class="d-flex flex-column align-items-center">
                 <img id="bestsleep" class="img-fluid bestsleep" src="assets/img/bestsleep.svg">
                 <div class="mb-3"></div>
-                <img id="movietitle" class="img-fluid movietitle" src="assets/img/movietitle.png" onclick="location.href='https://www.amerisleep.kr/purchase/mattresses/index?type=memoryfoam'">
+                <img id="movietitle" class="img-fluid movietitle" src="assets/img/movietitle.png"
+                    onclick="location.href='https://www.amerisleep.kr/purchase/mattresses/index?type=memoryfoam'">
             </div>
         </div>
 
-        <div id="box" class="position-absolute row col-7 col-md-7 box" style="display: none;">
+        <div id="box" class="position-absolute row col-7 col-md-7 box">
             <div class="col-md-4 d-flex position-relative justify-content-center"
                 style="padding: 10px 0 10px 0;border-right: 1px solid gray;">
                 <div class="align-self-center"
                     onclick="location.href='https://www.amerisleep.kr/purchase/mattresses/index?type=memoryfoam'">
-                    <img class="img-fluid" src="assets/img/icon01.png" style="width: 70px" /><img src="assets/img/matress.svg"
-                        style="height: 12px;margin-left: 10px;" />
+                    <img class="img-fluid" src="assets/img/icon01.png" style="width: 70px" /><img
+                        src="assets/img/matress.svg" style="height: 12px;margin-left: 10px;" />
                 </div>
                 <div style="position: absolute;background-color: #10376D;width: 100%;height: 6px;bottom: 0;"></div>
             </div>
@@ -430,8 +385,8 @@
                 style="padding: 10px 0 10px 0;border-right: 1px solid gray;">
                 <div class="align-self-center"
                     onclick="location.href='https://www.amerisleep.kr/purchase/mattresses/index?type=frame'">
-                    <img class="img-fluid" src="assets/img/icon02.png" style="width: 70px" /><img src="assets/img/frame.svg"
-                        style="height: 12px;margin-left: 10px;" />
+                    <img class="img-fluid" src="assets/img/icon02.png" style="width: 70px" /><img
+                        src="assets/img/frame.svg" style="height: 12px;margin-left: 10px;" />
                 </div>
                 <div
                     style="position: absolute;background-color: #10376D;width: 100%;height: 6px;bottom: 0;display: none;">
@@ -440,19 +395,20 @@
             <div class="col-md-4 d-flex position-relative justify-content-center" style="padding: 10px 0 10px 0;">
                 <div class="align-self-center"
                     onclick="location.href='https://www.amerisleep.kr/purchase/mattresses/index?type=pillow'">
-                    <img class="img-fluid" src="assets/img/icon03.png" style="width: 70px" /><img src="assets/img/pillow.svg"
-                        style="height: 12px;margin-left: 10px;" />
+                    <img class="img-fluid" src="assets/img/icon03.png" style="width: 70px" /><img
+                        src="assets/img/pillow.svg" style="height: 12px;margin-left: 10px;" />
                 </div>
                 <div
                     style="position: absolute;background-color: #10376D;width: 100%;height: 6px;bottom: 0;display: none;">
                 </div>
             </div>
-            <div style="width: 30px;height: 100%;position: absolute;left: 0;display: flex;" onclick="ASmoveLeftToRight();">
+            <div style="width: 30px;height: 100%;position: absolute;left: 0;top: 0;display: flex;"
+                onclick="ASmoveLeftToRight();">
                 <img class="img-fluid" src="assets/img/rightarrow.svg" style="align-self: center;width: 30px;" />
             </div>
         </div>
 
-        <div id="sidebox" class="position-absolute row col-7 col-md-7 box"
+        <div id="sidebox" class="position-absolute row col-7 col-md-7 sidebox"
             style="height: 271px;width: 30px;margin: 0;right: 0;padding: 0;">
             <div style="width: 30px;height: 100%;left: 0;display: flex;" onclick="ASmoveRightToLeft();">
                 <img class="img-fluid" src="assets/img/rightarrow.svg" style="align-self: center;width: 20px;" />
@@ -465,8 +421,10 @@
     <div class="mb-3"></div>
 
     <div class="row" style="margin: 0;">
-        <div class="col-3 col-lg-1" style="display: flex;flex-direction: column;justify-content: center;">
+        <div class="col-3 col-lg-1 mx-auto"
+            style="display: flex;flex-direction: column;justify-content: center;align-items: center;padding: 0;">
             <img src="assets/img/Rectangle.png" style="height: 300px; width:60px;margin-top: 70px;" />
+            <img src="assets/img/leftarrow.svg" style="position: absolute;margin-top: 70px;" />
         </div>
         <div class="col-9 col-lg-11">
             <div style="margin-bottom: 50px;">
@@ -566,317 +524,32 @@
 
     <div class="mb-5"></div>
 
-    <div class="row flex-row flex-nowrap overflow-scroll hidescroll" style="margin: 0;">
-        <!--  -->
-        <div class="commentbox">
-            <div style="display: flex;flex-direction: row;">
-                <div style="flex-grow: 1;">
-                    AS3
-                </div>
-                <div style="flex-grow: 1;text-align: right;">
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                </div>
-            </div>
-            <div style="height: 80%;display: flex;flex-direction: column;">
-                <div>
-                    민희멀
-                </div>
-                <div style="flex-grow: 1;display: flex;align-items: center;">
-                    템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
-                    아직도 열기 및 몸
-                </div>
-                <div style="display: flex;flex-direction: row;">
-                    <div style="flex-grow: 1;">
-                        2022.1.1
-                    </div>
-                    <div style="flex-grow: 1;text-align: right;">
-                        <img src="assets/img/star.png" style="height: 20px;" />
-                        <img src="assets/img/star.png" style="height: 20px;" />
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--  -->
-        <div class="commentbox">
-            <div style="display: flex;flex-direction: row;">
-                <div style="flex-grow: 1;">
-                    AS3
-                </div>
-                <div style="flex-grow: 1;text-align: right;">
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                </div>
-            </div>
-            <div style="height: 80%;display: flex;flex-direction: column;">
-                <div>
-                    민희멀
-                </div>
-                <div style="flex-grow: 1;display: flex;align-items: center;">
-                    템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
-                    아직도 열기 및 몸
-                </div>
-                <div style="display: flex;flex-direction: row;">
-                    <div style="flex-grow: 1;">
-                        2022.1.1
-                    </div>
-                    <div style="flex-grow: 1;text-align: right;">
-                        <img src="assets/img/star.png" style="height: 20px;" />
-                        <img src="assets/img/star.png" style="height: 20px;" />
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--  -->
-        <div class="commentbox">
-            <div style="display: flex;flex-direction: row;">
-                <div style="flex-grow: 1;">
-                    AS3
-                </div>
-                <div style="flex-grow: 1;text-align: right;">
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                </div>
-            </div>
-            <div style="height: 80%;display: flex;flex-direction: column;">
-                <div>
-                    민희멀
-                </div>
-                <div style="flex-grow: 1;display: flex;align-items: center;">
-                    템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
-                    아직도 열기 및 몸
-                </div>
-                <div style="display: flex;flex-direction: row;">
-                    <div style="flex-grow: 1;">
-                        2022.1.1
-                    </div>
-                    <div style="flex-grow: 1;text-align: right;">
-                        <img src="assets/img/star.png" style="height: 20px;" />
-                        <img src="assets/img/star.png" style="height: 20px;" />
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--  -->
-        <div class="commentbox">
-            <div style="display: flex;flex-direction: row;">
-                <div style="flex-grow: 1;">
-                    AS3
-                </div>
-                <div style="flex-grow: 1;text-align: right;">
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                </div>
-            </div>
-            <div style="height: 80%;display: flex;flex-direction: column;">
-                <div>
-                    민희멀
-                </div>
-                <div style="flex-grow: 1;display: flex;align-items: center;">
-                    템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
-                    아직도 열기 및 몸
-                </div>
-                <div style="display: flex;flex-direction: row;">
-                    <div style="flex-grow: 1;">
-                        2022.1.1
-                    </div>
-                    <div style="flex-grow: 1;text-align: right;">
-                        <img src="assets/img/star.png" style="height: 20px;" />
-                        <img src="assets/img/star.png" style="height: 20px;" />
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--  -->
-        <div class="commentbox">
-            <div style="display: flex;flex-direction: row;">
-                <div style="flex-grow: 1;">
-                    AS3
-                </div>
-                <div style="flex-grow: 1;text-align: right;">
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                </div>
-            </div>
-            <div style="height: 80%;display: flex;flex-direction: column;">
-                <div>
-                    민희멀
-                </div>
-                <div style="flex-grow: 1;display: flex;align-items: center;">
-                    템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
-                    아직도 열기 및 몸
-                </div>
-                <div style="display: flex;flex-direction: row;">
-                    <div style="flex-grow: 1;">
-                        2022.1.1
-                    </div>
-                    <div style="flex-grow: 1;text-align: right;">
-                        <img src="assets/img/star.png" style="height: 20px;" />
-                        <img src="assets/img/star.png" style="height: 20px;" />
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--  -->
-        <div class="commentbox">
-            <div style="display: flex;flex-direction: row;">
-                <div style="flex-grow: 1;">
-                    AS3
-                </div>
-                <div style="flex-grow: 1;text-align: right;">
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                </div>
-            </div>
-            <div style="height: 80%;display: flex;flex-direction: column;">
-                <div>
-                    민희멀
-                </div>
-                <div style="flex-grow: 1;display: flex;align-items: center;">
-                    템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
-                    아직도 열기 및 몸
-                </div>
-                <div style="display: flex;flex-direction: row;">
-                    <div style="flex-grow: 1;">
-                        2022.1.1
-                    </div>
-                    <div style="flex-grow: 1;text-align: right;">
-                        <img src="assets/img/star.png" style="height: 20px;" />
-                        <img src="assets/img/star.png" style="height: 20px;" />
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--  -->
-        <div class="commentbox">
-            <div style="display: flex;flex-direction: row;">
-                <div style="flex-grow: 1;">
-                    AS3
-                </div>
-                <div style="flex-grow: 1;text-align: right;">
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                </div>
-            </div>
-            <div style="height: 80%;display: flex;flex-direction: column;">
-                <div>
-                    민희멀
-                </div>
-                <div style="flex-grow: 1;display: flex;align-items: center;">
-                    템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
-                    아직도 열기 및 몸
-                </div>
-                <div style="display: flex;flex-direction: row;">
-                    <div style="flex-grow: 1;">
-                        2022.1.1
-                    </div>
-                    <div style="flex-grow: 1;text-align: right;">
-                        <img src="assets/img/star.png" style="height: 20px;" />
-                        <img src="assets/img/star.png" style="height: 20px;" />
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--  -->
-        <div class="commentbox">
-            <div style="display: flex;flex-direction: row;">
-                <div style="flex-grow: 1;">
-                    AS3
-                </div>
-                <div style="flex-grow: 1;text-align: right;">
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                </div>
-            </div>
-            <div style="height: 80%;display: flex;flex-direction: column;">
-                <div>
-                    민희멀
-                </div>
-                <div style="flex-grow: 1;display: flex;align-items: center;">
-                    템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
-                    아직도 열기 및 몸
-                </div>
-                <div style="display: flex;flex-direction: row;">
-                    <div style="flex-grow: 1;">
-                        2022.1.1
-                    </div>
-                    <div style="flex-grow: 1;text-align: right;">
-                        <img src="assets/img/star.png" style="height: 20px;" />
-                        <img src="assets/img/star.png" style="height: 20px;" />
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--  -->
-        <div class="commentbox">
-            <div style="display: flex;flex-direction: row;">
-                <div style="flex-grow: 1;">
-                    AS3
-                </div>
-                <div style="flex-grow: 1;text-align: right;">
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                    <img src="assets/img/star.png" style="height: 20px;" />
-                </div>
-            </div>
-            <div style="height: 80%;display: flex;flex-direction: column;">
-                <div>
-                    민희멀
-                </div>
-                <div style="flex-grow: 1;display: flex;align-items: center;">
-                    템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는
-                    아직도 열기 및 몸
-                </div>
-                <div style="display: flex;flex-direction: row;">
-                    <div style="flex-grow: 1;">
-                        2022.1.1
-                    </div>
-                    <div style="flex-grow: 1;text-align: right;">
-                        <img src="assets/img/star.png" style="height: 20px;" />
-                        <img src="assets/img/star.png" style="height: 20px;" />
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--  -->
-    </div>
+    <div id="list" class="row flex-row flex-nowrap overflow-scroll hidescroll" style="margin: 0;"></div>
 
-    <input type="range" class="form-range mt-2">
+    <div class="mb-3"></div>
 
-    <div class="d-flex justify-content-between">
+    <input type="range" class="form-range mt-2" min="0" max="10" value="0" onchange="showVal(this.value)">
+
+    <div class="mb-3"></div>
+
+    <div class="d-flex justify-content-between pcprint">
         <div>
 
         </div>
         <div>
-            <img src="assets/img/goseeallreview.svg" onclick="locaion.href='https://www.amerisleep.kr/about/review'">
+            <img class="pcprint" src="assets/img/goseeallreview.svg"
+                onclick="locaion.href='https://www.amerisleep.kr/about/review'">
         </div>
     </div>
+
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <img class="mobileprint img-fluid col-12" src="assets/img/readthedocfromuser.svg"
+                onclick="locaion.href='https://www.amerisleep.kr/about/review'" style="width: 80%;">
+        </div>
+    </div>
+
+    <div class="mb-5"></div>
 
     <div class="row" style="background-color: #F7F8FC;margin: 0;">
         <div class="col-lg-4 col-sm-12" style="display: flex;flex-direction: column;justify-content: center;">
@@ -929,16 +602,31 @@
         }
 
         function ASmoveLeftToRight() {
-            $('#box').removeClass("closeside");
-            $('#box').addClass("openside");
+            $("#box").animate({
+                right: "-250px"
+            }, 1000, function () {
+                $("#sidebox").css('visibility', 'visible');
+                $("#sidebox").css('display', 'block');
+                $("#box").css('visibility', 'hidden');
+                $("#box").css('display', 'none');
+            });
         }
 
         function ASmoveRightToLeft() {
+            isOpen = false;
             $("#sidebox").css('visibility', 'hidden');
             $("#sidebox").css('display', 'none');
-            $("#box").show();
-            $('#box').removeClass("openside");
-            $('#box').addClass("closeside");
+            $("#box").css('visibility', 'visible');
+            $("#box").css('display', 'block');
+            $("#box").animate({
+                right: "-250px"
+            }, 0, function () {
+                $("#box").animate({
+                    right: "10px"
+                }, 1000, function () {
+
+                });
+            });
         }
 
         const box = document.getElementById('box');
@@ -976,6 +664,47 @@
             </div>
         </div>
     </div>
+
+    <script>
+
+        function makestarts(starts) {
+            let result = '';
+            for (var i = 0; i < starts; i++) {
+                result += '<img src="assets/img/red_star.png" style="height: 15px;" />';
+            }
+            return result;
+        }
+        function PutData(brand, name, date, starts, message) {
+            return '<div class="commentbox"> \
+                <div style="display: flex;flex-direction: row;"> \
+                    <div style="flex-grow: 1;">'+ brand + '</div> \
+                    <div style="flex-grow: 1;text-align: right;">'+ makestarts(starts) + '</div> \
+                </div> \
+                <div style="height: 80%;display: flex;flex-direction: column;"> \
+                    <div>'+ name + '</div> \
+                    <div style="flex-grow: 1;display: flex;align-items: center;">'+ message + '</div> \
+                    <div style="display: flex;flex-direction: row;"> \
+                        <div style="flex-grow: 1;">'+ date + '</div> \
+                        <div style="flex-grow: 1;text-align: right;"> \
+                            <img src="assets/img/red_star.png" style="height: 15px;" /> \
+                            <img src="assets/img/red_star.png" style="height: 15px;" /> \
+                        </div> \
+                    </div> \
+                </div> \
+            </div>';
+        }
+
+        for (var i = 0; i < 10; i++) {
+            $("#list").append(PutData('AS1', '홍길동', '2022.1.1', 5, '템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는 아직도 열기 및 몸'));
+        }
+
+        function showVal(index) {
+            let gap = 300 * index
+            console.log(gap);
+            $('#list').scrollLeft(gap);
+        }
+
+    </script>
 
 </body>
 

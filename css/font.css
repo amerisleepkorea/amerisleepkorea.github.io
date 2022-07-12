@@ -1,0 +1,54 @@
+@font-face {
+    font-family: NotoSansCJKkr;
+    src: url("assets/font/NotoSansCJKkr-Black.otf") format("opentype")
+}
+
+@font-face {
+    font-family: NotoSansCJKkr-Bold;
+    src: url("assets/font/NotoSansCJKkr-Bold.otf") format("opentype")
+}
+
+@font-face {
+    font-family: NotoSansCJKkr-DemiLight;
+    src: url("assets/font/NotoSansCJKkr-DemiLight.otf") format("opentype")
+}
+
+@font-face {
+    font-family: NotoSansCJKkr-Light;
+    src: url("assets/font/NotoSansCJKkr-Light.otf") format("opentype")
+}
+
+@font-face {
+    font-family: NotoSansCJKkr-Medium;
+    src: url("assets/font/NotoSansCJKkr-Medium.otf") format("opentype")
+}
+
+@font-face {
+    font-family: NotoSansCJKkr-Regular;
+    src: url("assets/font/NotoSansCJKkr-Regular.otf") format("opentype")
+}
+
+@font-face {
+    font-family: NotoSansCJKkr-Thin;
+    src: url("assets/font/NotoSansCJKkr-Thin.otf") format("opentype")
+}
+
+@font-face {
+    font-family: Eina01_Bold;
+    src: url("assets/font/Eina01_Bold.otf") format("opentype")
+}
+
+@font-face {
+    font-family: Eina01_Light;
+    src: url("assets/font/Eina01_Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Eina01_Regular;
+    src: url("assets/font/Eina01_Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Eina01_SemiBold;
+    src: url("assets/font/Eina01_SemiBold.otf") format("opentype");
+}
