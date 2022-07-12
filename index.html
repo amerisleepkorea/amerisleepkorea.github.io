@@ -264,7 +264,7 @@
             -ms-overflow-style: none;
         }
 
-        .cansle_main_pop {
+        .cancelbtn {
             background: url('https://www.amerisleep.kr/img/close_btn.png') no-repeat;
             background-size: contain;
             background-position: center center;
@@ -658,7 +658,7 @@
                     <div class="d-flex justify-content-end align-items-center">
                         <label class="div textArae" for="todayno">오늘 하루 보지 않음</label>
                         <input type="checkbox" onclick="closePop(19)" style="margin-left: 10px;">
-                        <button class="cansle_main_pop" onclick="$('#ASModal').modal('hide')"></button>
+                        <button class="cancelbtn" onclick="$('#ASModal').modal('hide')"></button>
                     </div>
                 </div>
             </div>
@@ -667,41 +667,8 @@
 
     <script>
 
-        function makestarts(starts) {
-            let result = '';
-            for (var i = 0; i < starts; i++) {
-                result += '<img src="assets/img/red_star.png" style="height: 15px;" />';
-            }
-            return result;
-        }
-        function PutData(brand, name, date, starts, message) {
-            return '<div class="commentbox"> \
-                <div style="display: flex;flex-direction: row;"> \
-                    <div style="flex-grow: 1;">'+ brand + '</div> \
-                    <div style="flex-grow: 1;text-align: right;">'+ makestarts(starts) + '</div> \
-                </div> \
-                <div style="height: 80%;display: flex;flex-direction: column;"> \
-                    <div>'+ name + '</div> \
-                    <div style="flex-grow: 1;display: flex;align-items: center;">'+ message + '</div> \
-                    <div style="display: flex;flex-direction: row;"> \
-                        <div style="flex-grow: 1;">'+ date + '</div> \
-                        <div style="flex-grow: 1;text-align: right;"> \
-                            <img src="assets/img/instagram.jpg" style="height: 15px;" /> \
-                            <img src="assets/img/blog.png" style="height: 15px;" /> \
-                        </div> \
-                    </div> \
-                </div> \
-            </div>';
-        }
-
         for (var i = 0; i < 10; i++) {
             $("#list").append(PutData('AS1', '홍길동', '2022.1.1', 5, '템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는 아직도 열기 및 몸'));
-        }
-
-        function showVal(index) {
-            let gap = 300 * index
-            console.log(gap);
-            $('#list').scrollLeft(gap);
         }
 
     </script>
