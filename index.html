@@ -313,7 +313,7 @@
 
 <body id="page-top">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <div class="container-fluid">
+        <div id="tg" class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="assets/img/navbar-logo.svg" alt="..." />
             </a>
@@ -697,6 +697,14 @@
         for (var i = 0; i < 10; i++) {
             $("#list").append(PutData('AS1', '홍길동', '2022.1.1', 5, '템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는 아직도 열기 및 몸'));
         }
+
+        $('#tg').on('hide.bs.collapse', function() {
+            // console.log("hide");
+            $('#mainNav').css('background-color', 'transparent')
+        }).on('show.bs.collapse', function() {
+            // console.log("show");
+            $('#mainNav').css('background-color', '#212529')
+        });
 
     </script>
 
