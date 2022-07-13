@@ -18,6 +18,18 @@
     <link href="css/slideshow.css" rel="stylesheet" />
     <link href="css/font.css" rel="stylesheet" />
     <style>
+        .rightgradient{
+            background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,0) 1%, rgba(255,255,255,1) 69%, rgba(255,255,255,1) 95%, rgba(255,255,255,1) 98%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 69%,rgba(255,255,255,1) 95%,rgba(255,255,255,1) 98%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 69%,rgba(255,255,255,1) 95%,rgba(255,255,255,1) 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+        }
+        .leftgradient{
+            background: -moz-linear-gradient(right,  rgba(255,255,255,0) 0%, rgba(255,255,255,0) 1%, rgba(255,255,255,1) 69%, rgba(255,255,255,1) 95%, rgba(255,255,255,1) 98%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(right,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 69%,rgba(255,255,255,1) 95%,rgba(255,255,255,1) 98%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 69%,rgba(255,255,255,1) 95%,rgba(255,255,255,1) 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+        }
         .commentbox {
             border: 1px solid gray;
             height: 250px;
@@ -552,8 +564,12 @@
 
     <div class="mb-5"></div>
 
-    <div id="list" class="row flex-row flex-nowrap overflow-scroll hidescroll" style="margin: 0;"></div>
-
+    <div style="position: relative">
+        <div class="leftgradient" style="position: absolute;left: 0;top: 0;width: 80px;height: 100%"></div>
+        <div id="list" class="row flex-row flex-nowrap overflow-scroll hidescroll" style="margin: 0;"></div>
+        <div class="rightgradient" style="position: absolute;right: 0;top: 0;width: 80px;height: 100%"></div>
+    </div>
+    
     <div class="mb-3"></div>
 
     <input type="range" class="form-range mt-2" min="0" max="10" value="0" onchange="showVal(this.value)">
