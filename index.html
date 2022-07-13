@@ -311,7 +311,7 @@
 
 </head>
 
-<body id="page-top" onscroll="myFunction()">
+<body id="page-top">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div id="tg" class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -707,8 +707,14 @@
             $('#mainNav').css('background-color', '#212529')
         });
 
-        function myFunction(index){
-            console.log(index);
+        window.onscroll = function() {ScrollBodyFunction()};
+
+        function ScrollBodyFunction(){
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                $('#mainNav').css('background-color', '#212529')
+            } else {
+                $('#mainNav').css('background-color', 'transparent')
+            }
         }
 
     </script>
