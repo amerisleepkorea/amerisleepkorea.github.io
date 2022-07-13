@@ -315,7 +315,7 @@
 
     <script type="text/javascript">
         $(window).on('load', function () {
-            $('#ASModal').modal('show');
+            // $('#ASModal').modal('show');
         });
     </script>
 
@@ -462,15 +462,15 @@
     <div class="mb-3"></div>
 
     <div style="display: flex; flex-direction: row">
-        <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;padding: 0;width: 50px;">
+        <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;padding: 0;width: 15%;">
             <img src="assets/img/Rectangle.png" style="height: 300px; width:60px;margin-top: 70px;" />
             <img src="assets/img/leftarrow2.svg" style="position: absolute;margin-top: 70px;" />
         </div>
-        <div class="row" style="margin: 0;width: 100%;">
+        <div style="width: 85%;padding-left: 20px;padding-right: 20px;">
                 <div style="margin-bottom: 50px;">
                     <img src="assets/img/whyamerisleep.svg" style="height: 50px;" />
                 </div>
-                <div class="row flex-row flex-nowrap justify-content-center align-items-center overflow-scroll hidescroll">
+                <div class="row flex-row flex-nowrap align-items-center overflow-scroll hidescroll">
                     <div class="col-md-2 col-sm-6 mb-3">
                         <img src="assets/img/icon04.svg" style="height: 50px;margin-left: 30px;" />
                         <div class="mb-5"></div>
@@ -716,10 +716,8 @@
         }
 
         $('#tg').on('hide.bs.collapse', function() {
-            // console.log("hide");
             $('#mainNav').css('background-color', 'transparent')
         }).on('show.bs.collapse', function() {
-            // console.log("show");
             $('#mainNav').css('background-color', '#212529')
         });
 
