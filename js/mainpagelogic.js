@@ -26,8 +26,29 @@ function PutData(brand, name, date, starts, message) {
     </div>';
 }
 
+let currentScroll = 0;
+
 function showVal(index) {
-    let gap = 300 * index
-    console.log(gap);
-    $('#list').scrollLeft(gap);
+
+    currentScroll = $('#list').get(0).scrollLeft;
+    console.log('currentScroll : '+currentScroll);
+    
+    let scrollWidth = $('#list').get(0).scrollWidth;
+    console.log('scrollWidth : '+scrollWidth);
+    let scrollPerWidth = scrollWidth/10;
+    console.log('scrollPerWidth : '+scrollPerWidth);
+
+    let wantsPosition = scrollPerWidth * index;
+
+    if (wantsPosition < currentScroll) {    
+        $('#list').animate({
+            scrollLeft: '-='+(currentScroll-wantsPosition)+'px'
+        }, "slow");
+    } else {
+        $('#list').animate({
+            scrollLeft: '+='+(wantsPosition-currentScroll)+'px'
+        }, "slow");
+    }
+
+    
 }
