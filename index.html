@@ -653,14 +653,20 @@
         }
 
         function ASmoveLeftToRight() {
-            $("#box").animate({
-                right: "-250px"
-            }, 600, function () {
-                $("#sidebox").css('visibility', 'visible');
-                $("#sidebox").css('display', 'block');
-                $("#box").css('visibility', 'hidden');
-                $("#box").css('display', 'none');
-            });
+            const width = $( window ).width();
+            console.log(width);
+            if (width > 800) {
+                return;
+            }else{
+                $("#box").animate({
+                    right: "-250px"
+                }, 600, function () {
+                    $("#sidebox").css('visibility', 'visible');
+                    $("#sidebox").css('display', 'block');
+                    $("#box").css('visibility', 'hidden');
+                    $("#box").css('display', 'none');
+                });
+            }
         }
 
         function ASmoveRightToLeft() {
