@@ -185,6 +185,12 @@
 .pc_foo_wrap .site_map_bottom .ul {
     width: calc(100vw* ( 273 /  1315 ));
     list-style-type: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.pc_foo_wrap .site_map_top .ul > li  > a,
+.pc_foo_wrap .site_map_bottom .ul > li  > a {
+    text-decoration: none;
 }
 
 .pc_foo_wrap .sub_title {
@@ -301,6 +307,12 @@
     width:273px;
     padding: 1px 0px 0px 0px;
     list-style-type: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.pc_foo_wrap .site_map_top .ul > li  > a,
+.pc_foo_wrap .site_map_bottom .ul > li  > a {
+    text-decoration: none;
 }
 
 .pc_foo_wrap .sub_title {
