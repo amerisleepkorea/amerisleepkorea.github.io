@@ -17,19 +17,31 @@
     <link href="css2/styles.css" rel="stylesheet" />
     <link href="css2/slideshow.css" rel="stylesheet" />
     <link href="css2/font.css" rel="stylesheet" />
+    <link href="css2/defalut_footer.css" rel="stylesheet" />
+
     <style>
-        .rightgradient{
-            background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,0) 1%, rgba(255,255,255,1) 69%, rgba(255,255,255,1) 95%, rgba(255,255,255,1) 98%); /* FF3.6-15 */
-            background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 69%,rgba(255,255,255,1) 95%,rgba(255,255,255,1) 98%); /* Chrome10-25,Safari5.1-6 */
-            background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 69%,rgba(255,255,255,1) 95%,rgba(255,255,255,1) 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+        .rightgradient {
+            background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, rgba(255, 255, 255, 1) 69%, rgba(255, 255, 255, 1) 95%, rgba(255, 255, 255, 1) 98%);
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, rgba(255, 255, 255, 1) 69%, rgba(255, 255, 255, 1) 95%, rgba(255, 255, 255, 1) 98%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, rgba(255, 255, 255, 1) 69%, rgba(255, 255, 255, 1) 95%, rgba(255, 255, 255, 1) 98%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=1);
+            /* IE6-9 */
         }
-        .leftgradient{
-            background: -moz-linear-gradient(right,  rgba(255,255,255,0) 0%, rgba(255,255,255,0) 1%, rgba(255,255,255,1) 69%, rgba(255,255,255,1) 95%, rgba(255,255,255,1) 98%); /* FF3.6-15 */
-            background: -webkit-linear-gradient(right,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 69%,rgba(255,255,255,1) 95%,rgba(255,255,255,1) 98%); /* Chrome10-25,Safari5.1-6 */
-            background: linear-gradient(to left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 69%,rgba(255,255,255,1) 95%,rgba(255,255,255,1) 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+
+        .leftgradient {
+            background: -moz-linear-gradient(right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, rgba(255, 255, 255, 1) 69%, rgba(255, 255, 255, 1) 95%, rgba(255, 255, 255, 1) 98%);
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, rgba(255, 255, 255, 1) 69%, rgba(255, 255, 255, 1) 95%, rgba(255, 255, 255, 1) 98%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, rgba(255, 255, 255, 1) 69%, rgba(255, 255, 255, 1) 95%, rgba(255, 255, 255, 1) 98%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=1);
+            /* IE6-9 */
         }
+
         .commentbox {
             border: 1px solid gray;
             height: 250px;
@@ -132,7 +144,7 @@
 
             .sidebox {
                 box-shadow: 2px 12px 8px -4px rgba(31, 73, 125, 0.8);
-                background-color: rgba(255,255,255,0.5);
+                background-color: rgba(255, 255, 255, 0.5);
                 border: 1px solid gray;
                 right: 11px;
                 /* opacity: 0.7; */
@@ -144,7 +156,7 @@
 
             .box {
                 box-shadow: 2px 12px 8px -4px rgba(31, 73, 125, 0.8);
-                background-color: rgba(255,255,255,0.5);
+                background-color: rgba(255, 255, 255, 0.5);
                 border: 1px solid gray;
                 right: 11px;
                 /* opacity: 0.7; */
@@ -211,21 +223,22 @@
                 width: 50%;
             }
 
-            #ShowMyCompany{
+            #ShowMyCompany {
                 height: 250px;
             }
 
-            #ShowMyCompany > div > #top{
+            #ShowMyCompany>div>#top {
                 width: 70%;
                 margin-bottom: 10px;
             }
 
-            #ShowMyCompany > div > #bottom{
+            #ShowMyCompany>div>#bottom {
                 width: 50%;
             }
 
-            .boxbelowbox{
-                width: 70px;margin-left: 30px;
+            .boxbelowbox {
+                width: 70px;
+                margin-left: 30px;
             }
 
         }
@@ -301,19 +314,19 @@
                 width: 60%;
             }
 
-            #ShowMyCompany{
+            #ShowMyCompany {
                 height: unset;
             }
 
-            #ShowMyCompany > div > #top{
+            #ShowMyCompany>div>#top {
                 width: 40%;
             }
 
-            #ShowMyCompany > div > #bottom{
+            #ShowMyCompany>div>#bottom {
                 width: 20%;
             }
 
-            .boxbelowbox{
+            .boxbelowbox {
                 width: 70px;
                 margin-left: 30px;
             }
@@ -424,7 +437,7 @@
                 style="padding: 10px 0 10px 0;border-right: 1px solid gray;">
                 <div class="align-self-start"
                     onclick="location.href='https://www.amerisleep.kr/purchase/mattresses/index?type=memoryfoam'">
-                    <img class="img-fluid boxbelowbox" src="assets/img/icon01.png"/>
+                    <img class="img-fluid boxbelowbox" src="assets/img/icon01.png" />
                     <img src="assets/img/matress.svg" style="height: 12px;margin-left: 10px;" />
                 </div>
                 <!-- <div style="position: absolute;background-color: #10376D;width: 100%;height: 6px;bottom: 0;"></div> -->
@@ -433,7 +446,7 @@
                 style="padding: 10px 0 10px 0;border-right: 1px solid gray;">
                 <div class="align-self-start"
                     onclick="location.href='https://www.amerisleep.kr/purchase/mattresses/index?type=frame'">
-                    <img class="img-fluid boxbelowbox" src="assets/img/icon02.png"/>
+                    <img class="img-fluid boxbelowbox" src="assets/img/icon02.png" />
                     <img src="assets/img/frame.svg" style="height: 12px;margin-left: 10px;" />
                 </div>
                 <div
@@ -443,7 +456,7 @@
             <div class="col-md-4 d-flex position-relative justify-content-start" style="padding: 10px 0 10px 0;">
                 <div class="align-self-start"
                     onclick="location.href='https://www.amerisleep.kr/purchase/mattresses/index?type=pillow'">
-                    <img class="img-fluid boxbelowbox" src="assets/img/icon03.png"/>
+                    <img class="img-fluid boxbelowbox" src="assets/img/icon03.png" />
                     <img src="assets/img/pillow.svg" style="height: 12px;margin-left: 10px;" />
                 </div>
                 <div
@@ -452,7 +465,8 @@
             </div>
             <div class="mobileprint" style="width: 30px;height: 100%;position: absolute;left: 0;top: 0;display: flex;"
                 onclick="ASmoveLeftToRight();">
-                <img class="img-fluid mobileprint" src="assets/img/rightarrow.svg" style="align-self: center;width: 30px;" />
+                <img class="img-fluid mobileprint" src="assets/img/rightarrow.svg"
+                    style="align-self: center;width: 30px;" />
             </div>
         </div>
 
@@ -469,68 +483,71 @@
     <div class="mb-3"></div>
 
     <div style="display: flex; flex-direction: row;width: 100vw;">
-        <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;padding: 0;width: 15%;">
+        <div
+            style="display: flex;flex-direction: column;justify-content: center;align-items: center;padding: 0;width: 15%;">
             <img src="assets/img/Rectangle.png" style="height: 300px; width:60px;margin-top: 70px;" />
             <img src="assets/img/leftarrow2.svg" style="position: absolute;margin-top: 70px;" />
         </div>
         <div style="width: 85%;padding-left: 20px;padding-right: 20px;">
-                <div style="margin-bottom: 50px;">
-                    <img src="assets/img/whyamerisleep.svg" style="height: 50px;" />
-                </div>
-                <div class="row col-md-12 col-sm-12 flex-row flex-nowrap align-items-center overflow-scroll hidescroll">
-                    <div class="col-md-2 col-sm-2 mb-3">
-                        <img src="assets/img/icon04.svg" style="height: 50px;margin-left: 30px;" />
-                        <div class="mb-5"></div>
-                        <h5 style="font-family: Eina01_Bold;font-weight: bold;color: #10376D;">Made in USA</h5>
-                        <div class="mb-3"></div>
-                        <div style="height: 100px;">
-                            <h7 style="font-family: NotoSansCJKkr-Regular;max-width: 250px;">매트리스의 재료, 제작, 포장까지, 미국에서 제조</h7>
-                            <h7 style="font-family: NotoSansCJKkr-Regular;max-width: 250px;">메모리폼의 오리지널리티, 미국 제조 아메리슬립</h7>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-2 mb-3">
-                        <img src="assets/img/icon05.svg" style="height: 50px;margin-left: 30px;" />
-                        <div class="mb-5"></div>
-                        <h5 style="font-family: Eina01_Bold;font-weight: bold;color: #10376D;">압도적인 기술력</h5>
-                        <div class="mb-3"></div>
-                        <div style="height: 100px;">
-                            <h7 style="font-family: NotoSansCJKkr-Regular;max-width: 250px;">최고의 고탄성 메모리폼 Bio-Pur</h7><br/>
-                            <h7 style="font-family: NotoSansCJKkr-Regular;max-width: 250px;">아메리슬립만의 특허기술 Hive 테크놀러지</h7>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-2 mb-3">
-                        <img src="assets/img/icon06.svg" style="height: 50px;margin-left: 30px;" />
-                        <div class="mb-5"></div>
-                        <h5 style="font-family: Eina01_Bold;font-weight: bold;color: #10376D;">친환경 매트리스</h5>
-                        <div class="mb-3"></div>
-                        <div style="height: 100px;"> 
-                            <h7 style="font-family: NotoSansCJKkr-Regular;max-width: 250px;">미국 최초 식물성 Caster오일로</h7><br/>
-                            <h7 style="font-family: NotoSansCJKkr-Regular;max-width: 250px;">만든 메모리폼</h7><br/>
-                            <h7 style="font-family: NotoSansCJKkr-Regular;max-width: 250px;">Off Gassing "0"</h7><br/>
-                            <h7 style="font-family: NotoSansCJKkr-Regular;max-width: 250px;">냄새 "0"</h7>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-2 mb-3">
-                        <img src="assets/img/icon07.svg" style="height: 50px;margin-left: 30px;" />
-                        <div class="mb-5"></div>
-                        <h5 style="font-family: Eina01_Bold;font-weight: bold;color: #10376D;">국내최초 & 최장 20년 워런티</h5>
-                        <div class="mb-3"></div>
-                        <div style="height: 100px;"> 
-                            <h7 style="font-family: NotoSansCJKkr-Regular;max-width: 250px;">아이부터 어른까지, 국내 최장 20년 워런티</h7><br/>
-                            <h7 style="font-family: NotoSansCJKkr-Regular;max-width: 250px;">100% 새제품 교환</h7>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-2 mb-3">
-                        <img src="assets/img/icon08.svg" style="height: 50px;margin-left: 30px;" />
-                        <div class="mb-5"></div>
-                        <h5 style="font-family: Eina01_Bold;font-weight: bold;color: #10376D;">10년 연속</br>미국소비자 만족도 1위</h5>
-                        <div class="mb-3"></div>
-                        <div style="height: 100px;"> 
-                            <h7 style="font-family: NotoSansCJKkr-Regular;max-width: 250px;">3억 3080명의 선택</h7><br/>
-                            <h7 style="font-family: NotoSansCJKkr-Regular;max-width: 250px;">사용자 추천율 98%</h7>
-                        </div>
+            <div style="margin-bottom: 50px;">
+                <img src="assets/img/whyamerisleep.svg" style="height: 50px;" />
+            </div>
+            <div class="row col-md-12 col-sm-12 flex-row flex-nowrap align-items-center overflow-scroll hidescroll">
+                <div class="col-md-2 col-sm-2 mb-3">
+                    <img src="assets/img/icon04.svg" style="height: 50px;margin-left: 30px;" />
+                    <div class="mb-5"></div>
+                    <h5 style="font-family: Eina01_Bold;font-weight: bold;color: #10376D;">Made in USA</h5>
+                    <div class="mb-3"></div>
+                    <div style="height: 100px;">
+                        <h7 style="font-family: NotoSansCJKkr-Regular;max-width: 250px;">매트리스의 재료, 제작, 포장까지, 미국에서 제조
+                        </h7>
+                        <h7 style="font-family: NotoSansCJKkr-Regular;max-width: 250px;">메모리폼의 오리지널리티, 미국 제조 아메리슬립</h7>
                     </div>
                 </div>
+                <div class="col-md-2 col-sm-2 mb-3">
+                    <img src="assets/img/icon05.svg" style="height: 50px;margin-left: 30px;" />
+                    <div class="mb-5"></div>
+                    <h5 style="font-family: Eina01_Bold;font-weight: bold;color: #10376D;">압도적인 기술력</h5>
+                    <div class="mb-3"></div>
+                    <div style="height: 100px;">
+                        <h7 style="font-family: NotoSansCJKkr-Regular;max-width: 250px;">최고의 고탄성 메모리폼 Bio-Pur</h7><br />
+                        <h7 style="font-family: NotoSansCJKkr-Regular;max-width: 250px;">아메리슬립만의 특허기술 Hive 테크놀러지</h7>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 mb-3">
+                    <img src="assets/img/icon06.svg" style="height: 50px;margin-left: 30px;" />
+                    <div class="mb-5"></div>
+                    <h5 style="font-family: Eina01_Bold;font-weight: bold;color: #10376D;">친환경 매트리스</h5>
+                    <div class="mb-3"></div>
+                    <div style="height: 100px;">
+                        <h7 style="font-family: NotoSansCJKkr-Regular;max-width: 250px;">미국 최초 식물성 Caster오일로</h7><br />
+                        <h7 style="font-family: NotoSansCJKkr-Regular;max-width: 250px;">만든 메모리폼</h7><br />
+                        <h7 style="font-family: NotoSansCJKkr-Regular;max-width: 250px;">Off Gassing "0"</h7><br />
+                        <h7 style="font-family: NotoSansCJKkr-Regular;max-width: 250px;">냄새 "0"</h7>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 mb-3">
+                    <img src="assets/img/icon07.svg" style="height: 50px;margin-left: 30px;" />
+                    <div class="mb-5"></div>
+                    <h5 style="font-family: Eina01_Bold;font-weight: bold;color: #10376D;">국내최초 & 최장 20년 워런티</h5>
+                    <div class="mb-3"></div>
+                    <div style="height: 100px;">
+                        <h7 style="font-family: NotoSansCJKkr-Regular;max-width: 250px;">아이부터 어른까지, 국내 최장 20년 워런티</h7>
+                        <br />
+                        <h7 style="font-family: NotoSansCJKkr-Regular;max-width: 250px;">100% 새제품 교환</h7>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 mb-3">
+                    <img src="assets/img/icon08.svg" style="height: 50px;margin-left: 30px;" />
+                    <div class="mb-5"></div>
+                    <h5 style="font-family: Eina01_Bold;font-weight: bold;color: #10376D;">10년 연속</br>미국소비자 만족도 1위</h5>
+                    <div class="mb-3"></div>
+                    <div style="height: 100px;">
+                        <h7 style="font-family: NotoSansCJKkr-Regular;max-width: 250px;">3억 3080명의 선택</h7><br />
+                        <h7 style="font-family: NotoSansCJKkr-Regular;max-width: 250px;">사용자 추천율 98%</h7>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -560,12 +577,14 @@
         </div>
     </div>
 
-    <div id="ShowMyCompany" class="row position-relative justify-content-center mb-3" style="background-color: #F7F8FC;margin: 0;">
+    <div id="ShowMyCompany" class="row position-relative justify-content-center mb-3"
+        style="background-color: #F7F8FC;margin: 0;">
         <img class="bg-img pcprint" src="assets/img/middlebackground.png" />
         <img class="bg-img mobileprint" src="assets/img/middlebackground2.png" />
         <div class="position-absolute align-self-center d-flex flex-column align-items-center">
             <img id="top" class="img-fluid" src="assets/img/middletitle.svg" />
-            <img id="bottom" class="img-fluid" src="assets/img/findstorenearhere.svg"  onclick="location.href='https://www.amerisleep.kr/shop'" />
+            <img id="bottom" class="img-fluid" src="assets/img/findstorenearhere.svg"
+                onclick="location.href='https://www.amerisleep.kr/shop'" />
         </div>
     </div>
 
@@ -576,8 +595,8 @@
             <img class="img-fluid" src="assets/img/review.svg" style="margin-left: 50px;height: 50px;" />
         </div>
         <div>
-            <img class="pcprint img-fluid" src="assets/img/review_subtitle.svg" style="margin-right: 60px;"/>
-            <img class="mobileprint img-fluid" src="assets/img/goseeallreview2.svg" style="margin-right: 10px;"/>
+            <img class="pcprint img-fluid" src="assets/img/review_subtitle.svg" style="margin-right: 60px;" />
+            <img class="mobileprint img-fluid" src="assets/img/goseeallreview2.svg" style="margin-right: 10px;" />
         </div>
     </div>
 
@@ -602,13 +621,15 @@
 
         </div>
         <div style="padding-left: 60px;padding-right: 60px;">
-            <img class="pcprint" src="assets/img/goseeallreview.svg" onclick="locaion.href='https://www.amerisleep.kr/about/review'">
+            <img class="pcprint" src="assets/img/goseeallreview.svg"
+                onclick="locaion.href='https://www.amerisleep.kr/about/review'">
         </div>
     </div>
 
     <div class="container">
         <div class="row d-flex justify-content-center">
-            <img class="mobileprint img-fluid col-12" src="assets/img/readthedocfromuser.svg" onclick="locaion.href='https://www.amerisleep.kr/about/review'" style="width: 80%;">
+            <img class="mobileprint img-fluid col-12" src="assets/img/readthedocfromuser.svg"
+                onclick="locaion.href='https://www.amerisleep.kr/about/review'" style="width: 80%;">
         </div>
     </div>
 
@@ -616,18 +637,663 @@
 
     <div class="row" style="background-color: #F7F8FC;margin: 0;padding-left: 20px;padding-right: 20px;">
         <div class="col-lg-4 col-sm-12" style="display: flex;flex-direction: column;justify-content: end;">
-            <img class="img-fluid mb-2" src="assets/img/matresses01.png" onclick="location.href='https://www.amerisleep.kr/purchase/mattresses/index?type=frame'" />
+            <img class="img-fluid mb-2" src="assets/img/matresses01.png"
+                onclick="location.href='https://www.amerisleep.kr/purchase/mattresses/index?type=frame'" />
         </div>
         <div class="col-lg-4 col-sm-12" style="display: flex;flex-direction: column;justify-content: end;">
-            <img class="img-fluid mb-2" src="assets/img/frame01.png" onclick="location.href='https://www.amerisleep.kr/purchase/mattresses/index?type=memoryfoam'" />
+            <img class="img-fluid mb-2" src="assets/img/frame01.png"
+                onclick="location.href='https://www.amerisleep.kr/purchase/mattresses/index?type=memoryfoam'" />
         </div>
         <div class="col-lg-4 col-sm-12" style="display: flex;flex-direction: column;justify-content: end;">
-            <img class="img-fluid mb-2" src="assets/img/pillow01.png" onclick="location.href='https://www.amerisleep.kr/purchase/mattresses/index?type=pillow'" />
+            <img class="img-fluid mb-2" src="assets/img/pillow01.png"
+                onclick="location.href='https://www.amerisleep.kr/purchase/mattresses/index?type=pillow'" />
         </div>
     </div>
 
     <img class="buyingguide pcprint img-fluid" onclick="location.href='https://www.amerisleep.kr/guide/index'">
     <img class="buyingguide2 mobileprint img-fluid" onclick="location.href='https://www.amerisleep.kr/guide/index'">
+
+    <!--  -->
+
+    <div class="row">
+
+        <div class="pc_foo">
+            
+            <div class="pc_foo_wrap">
+
+
+                <div class="foo_top">
+                    <div class="sns_title">
+
+                        <div class="title_">
+                            <span class="span">Stay connected.</span>
+                        </div>
+
+                        <div class="sns_icons">
+                            <div class="n_blog">
+                                <a target="_blank" href="https://blog.naver.com/amerisleep">
+                                    <img class="img-fluid" src="img/icon/n_blog_icon.png" alt="네이버 블로그">
+                                </a>
+                            </div>
+                            <div class="insta">
+                                <a target="_blank" href="https://www.instagram.com/amerisleep.korea/">
+                                    <img class="img-fluid" src="img/icon/instar_icon.png" alt="인스타그램">
+                                </a>
+                            </div>
+                            <div class="facebook">
+                                <a href="https://brand.naver.com/amerisleep">
+                                    <img class="img-fluid" src="img/icon/n_shop_icon.png" alt="네이버스토어">
+                                </a>
+                            </div>
+                            <div class="n_post">
+                                <a href="https://m.post.naver.com/amerisleep">
+                                    <img class="img-fluid" src="img/icon/n_post_icon.png" alt="네이버포스트">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- pc foo sitemap -->
+                    <div class="site_map">
+                        <div class="site_map_wrap">
+                            <div class="site_map_top">
+
+                                <ul class="ul">
+                                    <li class="sub_title">메모리폼 매트리스</li>
+
+                                    <li class="list">
+                                        <a href="/purchase/mattresses/detail?prd_id=699" class="link">AS1</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/purchase/mattresses/detail?prd_id=700" class="link">AS2</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/purchase/mattresses/detail?prd_id=701" class="link">AS3</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/purchase/mattresses/detail?prd_id=702" class="link">AS4</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/purchase/mattresses/detail?prd_id=703" class="link">AS5</a>
+                                    </li>
+                                </ul>
+
+                                <ul class="ul">
+                                    <li class="sub_title">매트리스 사이즈</li>
+
+                                    <li class="list">
+                                        <a href="/purchase/matt_size/single" class="link">슈퍼싱글
+                                            매트리스</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/purchase/matt_size/queen" class="link">퀸
+                                            매트리스</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/purchase/matt_size/king" class="link">킹
+                                            매트리스</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/purchase/matt_size/large_king" class="link">라지킹 매트리스</a>
+                                    </li>
+                                </ul>
+
+                                <ul class="ul">
+                                    <li class="sub_title">침구</li>
+
+                                    <!-- <li class="list">
+                                    <a href="/purchase/mattresses/detail?prd_id=731" class="link">플렉스 베개</a>
+                                </li> -->
+
+                                    <li class="list">
+                                        <a href="/purchase/mattresses/detail?prd_id=716" class="link">컴포트 클래식
+                                            베개</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/purchase/mattresses/detail?prd_id=718" class="link">듀얼 컴포트
+                                            베개</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/purchase/mattresses/detail?prd_id=719" class="link">프로텍터</a>
+                                    </li>
+                                </ul>
+
+                                <ul class="ul">
+                                    <li class="sub_title">아메리슬립</li>
+
+                                    <li class="list">
+                                        <a href="/about/history" class="link">역사</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/about/tech" class="link">기술</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/about/biopur" class="link">Bio-Pur</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/purchase/mattresses/index?type='memoryfoam'" class="link">매트리스</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/about/review" class="link">소비자 후기</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/about/eco" class="link">친환경</a>
+                                    </li>
+
+                                    <!-- <li class="list">
+                                    <a href="/about/b2b" class="link">매트리스 도매(B2B)</a>
+                                </li> -->
+
+                                    <li class="list">
+                                        <a href="/about/event" class="link">이벤트</a>
+                                    </li>
+                                </ul>
+
+                                <ul class="ul">
+                                    <li class="sub_title">고객지원</li>
+
+                                    <li class="list">
+                                        <a href="/center?type=1" class="link">자주 묻는 질문</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/center?type=2" class="link">워런티</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/install" class="link">매트리스 설치방법</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/center" class="link">문의하기</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/shop" class="link">매장</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <div class="site_map_bottom">
+
+                                <ul class="ul">
+                                    <li class="sub_title">하이브리드 매트리스</li>
+
+                                    <li class="list">
+                                        <a href="/purchase/mattresses/detail?prd_id=704" class="link">AS2 HB</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/purchase/mattresses/detail?prd_id=705" class="link">AS3 HB</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/purchase/mattresses/detail?prd_id=706" class="link">AS5 HB</a>
+                                    </li>
+                                </ul>
+
+                                <ul class="ul">
+                                    <li class="sub_title">침대 프레임</li>
+
+                                    <li class="list">
+                                        <a href="/purchase/mattresses/detail?prd_id=708" class="link">소호</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/purchase/mattresses/detail?prd_id=709" class="link">브루클린</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/purchase/mattresses/detail?prd_id=711" class="link">맨해튼</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/purchase/mattresses/detail?prd_id=763" class="link">시애틀</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/purchase/mattresses/detail?prd_id=712" class="link">퀸즈</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/purchase/mattresses/detail?prd_id=713" class="link">애리조나</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/purchase/mattresses/detail?prd_id=714" class="link">우디</a>
+                                    </li>
+                                    <li class="list">
+                                        <a href="/purchase/mattresses/detail?prd_id=715" class="link">에이패드</a>
+                                    </li>
+
+
+                                    <!-- <li class="sub_title ame_frame">아메리슬립 전동 프레임</li>
+
+                                <li class="list">
+                                    <a href="/purchase/mattresses/detail?prd_id=730" class="link">아메리슬립
+                                        더모션</a>
+                                </li> -->
+                                </ul>
+
+                                <ul class="ul">
+                                    <li class="sub_title">교육(정보)</li>
+
+                                    <li class="list">
+                                        <a href="/guide/index" class="link">매트리스 구매가이드</a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="/guide/info" class="link">수면 정보</a>
+                                    </li>
+
+                                    <!-- <li class="list">
+                                    <a href="/guide/best" class="link">베스트 매트리스</a>
+                                </li> -->
+
+                                    <li class="list">
+                                        <a href="/guide/size" class="link">매트리스 크기</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 모바일 푸터 영역-->
+                    <div class="m_site_map">
+                        <div class="m_site_map_wrap">
+
+                            <!-- 아코디언 메뉴-->
+                            <ul class="ul">
+                                <!-- 메모리폼 매트릭스 -->
+                                <!-- 질문 영역 -->
+                                <li class="list content_qustion">
+                                    <div class="content_qustion_wrap">
+                                        <p class="q_title">메모리폼 매트리스</p>
+                                    </div>
+                                </li>
+
+                                <!-- 답변 영역 -->
+                                <li class="list content_answer">
+                                    <div class="content_answer_wrap">
+                                        <ul class="inner_ul">
+                                            <li class="list">
+                                                <a href="/purchase/mattresses/detail?prd_id=699" class="link">AS1</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/purchase/mattresses/detail?prd_id=700" class="link">AS2</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/purchase/mattresses/detail?prd_id=701" class="link">AS3</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/purchase/mattresses/detail?prd_id=702" class="link">AS4</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/purchase/mattresses/detail?prd_id=703" class="link">AS5</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+
+                                <!-- 하이브리드 매트릭스 -->
+                                <li class="list content_qustion">
+                                    <div class="content_qustion_wrap">
+                                        <p class="q_title">하이브리드 매트리스</p>
+                                    </div>
+                                </li>
+
+                                <li class="list content_answer">
+                                    <div class="content_answer_wrap">
+                                        <ul class="inner_ul">
+
+                                            <li class="list">
+                                                <a href="/purchase/mattresses/detail?prd_id=704" class="link">AS2 HB</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/purchase/mattresses/detail?prd_id=705" class="link">AS3 HB</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/purchase/mattresses/detail?prd_id=706" class="link">AS5 HB</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+
+                                <!-- 매트리스 사이즈 -->
+                                <!-- 질문 영역 -->
+                                <li class="list content_qustion">
+                                    <div class="content_qustion_wrap">
+                                        <p class="q_title">매트리스 사이즈</p>
+                                    </div>
+                                </li>
+
+                                <!-- 답변 영역 -->
+                                <li class="list content_answer">
+                                    <div class="content_answer_wrap">
+                                        <ul class="inner_ul">
+                                            <li class="list">
+                                                <a href="/purchase/matt_size/single" class="link">슈퍼싱글 매트리스</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/purchase/matt_size/queen" class="link">퀸
+                                                    매트리스</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/purchase/matt_size/king" class="link">킹
+                                                    매트리스</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/purchase/matt_size/large_king" class="link">라지킹 매트리스</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+
+                                <!-- 침대 프레임 -->
+                                <!-- 질문 영역 -->
+                                <li class="list content_qustion">
+                                    <div class="content_qustion_wrap">
+                                        <p class="q_title">침대 프레임</p>
+                                    </div>
+                                </li>
+
+                                <!-- 답변 영역 -->
+                                <li class="list content_answer">
+                                    <div class="content_answer_wrap">
+                                        <ul class="inner_ul">
+
+                                            <li class="list">
+                                                <a href="/purchase/mattresses/detail?prd_id=708" class="link">소호</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/purchase/mattresses/detail?prd_id=709" class="link">브루클린</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/purchase/mattresses/detail?prd_id=711" class="link">맨해튼</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/purchase/mattresses/detail?prd_id=763" class="link">시애틀</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/purchase/mattresses/detail?prd_id=712" class="link">퀸즈</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/purchase/mattresses/detail?prd_id=713" class="link">애리조나</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/purchase/mattresses/detail?prd_id=714" class="link">우디</a>
+                                            </li>
+                                            <li class="list">
+                                                <a href="/purchase/mattresses/detail?prd_id=715" class="link">에이패드</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+
+                                <!-- 침구 -->
+                                <!-- 질문 영역 -->
+                                <li class="list content_qustion">
+                                    <div class="content_qustion_wrap">
+                                        <p class="q_title">침구</p>
+                                    </div>
+                                </li>
+
+                                <!-- 답변 영역 -->
+                                <li class="list content_answer">
+                                    <div class="content_answer_wrap">
+                                        <ul class="inner_ul">
+                                            <!-- <li class="list">
+                                            <a href="/purchase/mattresses/detail?prd_id=731"
+                                                class="link">플렉스 베개</a>
+                                        </li> -->
+
+                                            <li class="list">
+                                                <a href="/purchase/mattresses/detail?prd_id=716" class="link">컴포트 클래식
+                                                    베개</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/purchase/mattresses/detail?prd_id=718" class="link">듀얼
+                                                    컴포트
+                                                    베개</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/purchase/mattresses/detail?prd_id=719" class="link">프로텍터</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <!-- 아메리 슬립 전동 프레임 -->
+                                <!-- <li class="list content_qustion">
+                                <div class="content_qustion_wrap">
+                                    <p class="q_title">아메리 슬립 전동 프레임</p>
+                                </div>
+                            </li>
+
+                            <li class="list content_answer">
+                                <div class="content_answer_wrap">
+                                    <ul class="inner_ul">
+                                        <li class="list">
+                                            <a href="/purchase/mattresses/detail?prd_id=730"
+                                                class="link">아메리슬립
+                                                더모션</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li> -->
+
+                                <!-- 아메리슬립 -->
+                                <!-- 질문 영역 -->
+                                <li class="list content_qustion">
+                                    <div class="content_qustion_wrap">
+                                        <p class="q_title">아메리슬립</p>
+                                    </div>
+                                </li>
+                                <!-- 답변 영역 -->
+                                <li class="list content_answer">
+                                    <div class="content_answer_wrap">
+                                        <ul class="inner_ul">
+                                            <li class="list">
+                                                <a href="/about/history" class="link">역사</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/about/tech" class="link">기술</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/about/biopur" class="link">Bio-Pur</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/purchase/mattresses/index?type=memoryfoam"
+                                                    class="link">매트리스</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/about/review" class="link">소비자
+                                                    후기</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/about/eco" class="link">친환경</a>
+                                            </li>
+
+                                            <!-- <li class="list">
+                                            <a href="/about/b2b" class="link">매트리스 도매(B2B)</a>
+                                        </li> -->
+
+                                            <li class="list">
+                                                <a href="/about/event" class="link">이벤트</a>
+                                            </li>
+
+
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <!-- 고객지원 -->
+                                <!-- 질문 영역 -->
+                                <li class="list content_qustion">
+                                    <div class="content_qustion_wrap">
+                                        <p class="q_title">고객지원</p>
+                                    </div>
+                                </li>
+
+                                <!-- 답변 영역 -->
+                                <li class="list content_answer">
+                                    <div class="content_answer_wrap">
+                                        <ul class="inner_ul">
+
+                                            <li class="list">
+                                                <a href="/center?type=1" class="link">자주 묻는
+                                                    질문</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/center?type=2" class="link">워런티</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/install" class="link">매트리스 설치방법</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/center" class="link">문의하기</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/shop" class="link">매장</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <!-- 교육(정보) -->
+                                <!-- 질문 영역 -->
+                                <li class="list content_qustion">
+                                    <div class="content_qustion_wrap">
+                                        <p class="q_title">교육 정보</p>
+                                    </div>
+                                </li>
+
+                                <!-- 답변 영역 -->
+                                <li class="list content_answer">
+                                    <div class="content_answer_wrap">
+                                        <ul class="inner_ul">
+                                            <li class="list">
+                                                <a href="/guide/index" class="link">매트리스
+                                                    구매가이드</a>
+                                            </li>
+
+                                            <li class="list">
+                                                <a href="/guide/info" class="link">수면 정보</a>
+                                            </li>
+
+                                            <!-- <li class="list">
+                                            <a href="/guide/best" class="link">베스트 매트리스</a>
+                                        </li> -->
+
+                                            <li class="list">
+                                                <a href="/guide/size" class="link">매트리스 크기</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="foo_bottom">
+                    <div class="company_info">
+                        <div class="company_info_wrap">
+
+                            <div class="info_left">
+                                <span class="span">아메리슬립코리아㈜<br>
+                                    대표자명: 김종확 · 개인정보보호책임자 : 위태흥 <a href="/privacy"
+                                        class="link foo_privateLink">[개인정보처리방침]</a><br>
+                                    고객센터: 1544-4806·E-mail : info@amerisleep.kr</span>
+                            </div>
+
+                            <div class="info_right">
+                                <span class="span">사업자등록번호: 167-81-00563 · 통신판매업신고번호: 2017-용인처인-0303<br>
+                                    주소: 경기도 용인시 처인구 포곡읍 석성로 879-17<br>
+                                    ⓒ amerisleep KOR all rights reserved.</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 모바일 footer bottom -->
+                <div class="m_foo_bottom">
+                    <div class="company_info">
+                        <div class="company_info_wrap">
+
+                            <div class="info_left">
+                                <span class="span">아메리슬립코리아㈜<br>
+                                    대표자명: 김종확 · 개인정보보호책임자 : 위태흥 <a href="/privacy"
+                                        class="link foo_privateLink">[개인정보처리방침]</a><br>
+                                    고객센터: 1544-4806<br />E-mail: info@amerisleep.kr</span>
+                            </div>
+
+                            <div class="info_right">
+                                <span class="span">사업자등록번호: 167-81-00563<br>통신판매업신고번호: 2017-용인처인-0303<br>
+                                    주소: 경기도 용인시 처인구 포곡읍 석성로 879-17<br>
+                                    ⓒ amerisleep KOR all rights reserved.</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--  -->
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js2/scripts.js"></script>
@@ -661,11 +1327,11 @@
         }
 
         function ASmoveLeftToRight() {
-            const width = $( window ).width();
+            const width = $(window).width();
             console.log(width);
             if (width > 800) {
                 return;
-            }else{
+            } else {
                 $("#box").animate({
                     right: "-250px"
                 }, 600, function () {
@@ -737,15 +1403,15 @@
             $("#list").append(PutData('AS1', '홍길동', '2022.1.1', 5, '템퍼페딕은 최초의 메모리폼 매트리스 브랜드 입니다. 아래 표에 의하면 더 새로운 브랜드에 비해 조금 뒤쳐지는 모습을 볼 수 있습니다. 템퍼페딕 매트리스는 아직도 열기 및 몸'));
         }
 
-        $('#tg').on('hide.bs.collapse', function() {
+        $('#tg').on('hide.bs.collapse', function () {
             $('#mainNav').css('background-color', 'transparent')
-        }).on('show.bs.collapse', function() {
+        }).on('show.bs.collapse', function () {
             $('#mainNav').css('background-color', '#212529')
         });
 
-        window.onscroll = function() {ScrollBodyFunction()};
+        window.onscroll = function () { ScrollBodyFunction() };
 
-        function ScrollBodyFunction(){
+        function ScrollBodyFunction() {
             if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
                 $('#mainNav').css('background-color', '#212529')
             } else {
